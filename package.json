@@ -1,0 +1,21 @@
+{
+  "name": "training",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "cli": "tsx cli/index.ts",
+    "push-plan": "tsx cli/index.ts push-plan",
+    "list": "tsx cli/index.ts list",
+    "clear": "tsx cli/index.ts clear"
+  },
+  "description": "Intervals.icu training plan CLI & dashboard",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.3"
+  }
+}
