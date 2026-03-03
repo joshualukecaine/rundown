@@ -17,6 +17,7 @@ export type EventCategory =
 export type SportType =
   | "Run"
   | "Ride"
+  | "VirtualRide"
   | "Swim"
   | "WeightTraining"
   | "Hike"

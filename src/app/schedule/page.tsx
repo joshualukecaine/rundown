@@ -1,13 +1,15 @@
 import { getClient } from "@/lib/intervals/server";
-import { groupEventsByWeek } from "@/lib/utils";
+import { groupEventsByWeek } from "@/lib/training-utils";
+import { todayISO } from "@/lib/date-utils";
 import { WeekSection } from "@/components/features/schedule/week-section";
 
 export default async function SchedulePage() {
-  const events = await getClient().listEvents(
-    "2026-03-03",
-    "2026-05-25",
-    "WORKOUT"
-  );
+  const start = todayISO();
+  const endDate = new Date();
+  endDate.setDate(endDate.getDate() + 90);
+  const end = endDate.toISOString().slice(0, 10);
+
+  const events = await getClient().listEvents(start, end, "WORKOUT");
   const weeks = groupEventsByWeek(events);
 
   return (

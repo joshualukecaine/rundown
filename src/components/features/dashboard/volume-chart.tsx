@@ -1,7 +1,7 @@
 "use client";
 
 import type { TrainingWeek } from "@/types";
-import { getBasePhase, getPhaseBgClass } from "@/lib/utils";
+import { getBasePhase, getPhaseBgClass } from "@/lib/training-utils";
 import {
   BarChart,
   Bar,
@@ -17,8 +17,6 @@ interface Props {
 }
 
 export function VolumeChart({ weeks }: Props) {
-  const currentWeekNumber =
-    weeks.find((w) => w.isCurrent)?.weekNumber ?? 0;
 
   const data = weeks.map((w) => {
     const completedKm = Math.round((w.completedDistance / 1000) * 10) / 10;

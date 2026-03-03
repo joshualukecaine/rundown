@@ -1,13 +1,13 @@
 import type { Event } from "@/lib/intervals";
 import { Calendar, MapPin, Play, ArrowRight } from "lucide-react";
+import { formatDateLong } from "@/lib/date-utils";
 import {
-  formatDateLong,
   distanceKm,
   getDescriptionSummary,
   getPhaseColorClass,
   getPhase,
   getEventDistance,
-} from "@/lib/utils";
+} from "@/lib/training-utils";
 
 export function NextRunCard({ event }: { event: Event | null }) {
   if (!event) {

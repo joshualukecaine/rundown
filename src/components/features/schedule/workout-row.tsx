@@ -1,12 +1,7 @@
 import type { Event } from "@/lib/intervals";
 import { CheckCircle2, Circle } from "lucide-react";
-import {
-  formatDate,
-  distanceKm,
-  getDescriptionSummary,
-  getEventDistance,
-  todayISO,
-} from "@/lib/utils";
+import { todayISO, formatDate } from "@/lib/date-utils";
+import { distanceKm, getDescriptionSummary, getEventDistance } from "@/lib/training-utils";
 
 export function WorkoutRow({ event }: { event: Event }) {
   const today = todayISO();

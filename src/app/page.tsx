@@ -1,16 +1,17 @@
 import { getClient } from "@/lib/intervals/server";
-import { groupEventsByWeek, getNextEvent } from "@/lib/utils";
+import { groupEventsByWeek, getNextEvent } from "@/lib/training-utils";
+import { todayISO } from "@/lib/date-utils";
 import { NextRunCard } from "@/components/features/dashboard/next-run-card";
 import { WeekSummaryCard } from "@/components/features/dashboard/week-summary-card";
 import { VolumeChart } from "@/components/features/dashboard/volume-chart";
 
-
 export default async function HomePage() {
-  const events = await getClient().listEvents(
-    "2026-03-03",
-    "2026-05-25",
-    "WORKOUT"
-  );
+  const start = todayISO();
+  const endDate = new Date();
+  endDate.setDate(endDate.getDate() + 90);
+  const end = endDate.toISOString().slice(0, 10);
+
+  const events = await getClient().listEvents(start, end, "WORKOUT");
   const weeks = groupEventsByWeek(events);
   const nextEvent = getNextEvent(events);
   const currentWeek = weeks.find((w) => w.isCurrent) ?? null;

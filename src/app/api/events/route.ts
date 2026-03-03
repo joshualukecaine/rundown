@@ -1,13 +1,23 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getClient } from "@/lib/intervals/server";
 import { IntervalsAPIError } from "@/lib/intervals";
+import { todayISO } from "@/lib/date-utils";
+import { EventQuerySchema, CreateEventSchema } from "@/lib/schemas";
 
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
-  const today = new Date().toISOString().slice(0, 10);
-  const oldest = searchParams.get("oldest") ?? today;
-  const newest = searchParams.get("newest") ?? today;
-  const category = searchParams.get("category") ?? undefined;
+  const parsed = EventQuerySchema.safeParse({
+    oldest: searchParams.get("oldest") ?? undefined,
+    newest: searchParams.get("newest") ?? undefined,
+    category: searchParams.get("category") ?? undefined,
+  });
+
+  if (!parsed.success) {
+    return NextResponse.json({ error: parsed.error.issues }, { status: 400 });
+  }
+
+  const today = todayISO();
+  const { oldest = today, newest = today, category } = parsed.data;
 
   try {
     const events = await getClient().listEvents(oldest, newest, category);
@@ -21,9 +31,20 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  let rawBody: unknown;
   try {
-    const body = await request.json();
-    const event = await getClient().createEvent(body);
+    rawBody = await request.json();
+  } catch {
+    return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
+  }
+
+  const parsed = CreateEventSchema.safeParse(rawBody);
+  if (!parsed.success) {
+    return NextResponse.json({ error: parsed.error.issues }, { status: 400 });
+  }
+
+  try {
+    const event = await getClient().createEvent(parsed.data);
     return NextResponse.json(event, { status: 201 });
   } catch (error) {
     if (error instanceof IntervalsAPIError) {

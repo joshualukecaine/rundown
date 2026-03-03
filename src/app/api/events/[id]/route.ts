@@ -1,15 +1,32 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getClient } from "@/lib/intervals/server";
 import { IntervalsAPIError } from "@/lib/intervals";
+import { UpdateEventSchema } from "@/lib/schemas";
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ id: string }> },
 ) {
+  const { id } = await params;
+  const eventId = Number(id);
+  if (!Number.isInteger(eventId) || eventId <= 0) {
+    return NextResponse.json({ error: "Invalid event id" }, { status: 400 });
+  }
+
+  let rawBody: unknown;
   try {
-    const { id } = await params;
-    const body = await request.json();
-    const event = await getClient().updateEvent(Number(id), body);
+    rawBody = await request.json();
+  } catch {
+    return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
+  }
+
+  const parsed = UpdateEventSchema.safeParse(rawBody);
+  if (!parsed.success) {
+    return NextResponse.json({ error: parsed.error.issues }, { status: 400 });
+  }
+
+  try {
+    const event = await getClient().updateEvent(eventId, parsed.data);
     return NextResponse.json(event);
   } catch (error) {
     if (error instanceof IntervalsAPIError) {
@@ -21,11 +38,16 @@ export async function PUT(
 
 export async function DELETE(
   _request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ id: string }> },
 ) {
+  const { id } = await params;
+  const eventId = Number(id);
+  if (!Number.isInteger(eventId) || eventId <= 0) {
+    return NextResponse.json({ error: "Invalid event id" }, { status: 400 });
+  }
+
   try {
-    const { id } = await params;
-    await getClient().deleteEvent(Number(id));
+    await getClient().deleteEvent(eventId);
     return new NextResponse(null, { status: 204 });
   } catch (error) {
     if (error instanceof IntervalsAPIError) {

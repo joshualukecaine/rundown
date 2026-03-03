@@ -1,11 +1,7 @@
 import type { TrainingWeek } from "@/types";
 import { CheckCircle2, Circle } from "lucide-react";
-import {
-  todayISO,
-  distanceKm,
-  getPhaseColorClass,
-  getEventDistance,
-} from "@/lib/utils";
+import { todayISO } from "@/lib/date-utils";
+import { distanceKm, getPhaseColorClass, getEventDistance } from "@/lib/training-utils";
 
 export function WeekSummaryCard({ week }: { week: TrainingWeek | null }) {
   if (!week) {

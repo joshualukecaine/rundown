@@ -1,6 +1,7 @@
 import type { TrainingWeek } from "@/types";
 import { WorkoutRow } from "./workout-row";
-import { distanceKm, getPhaseColorClass, cn } from "@/lib/utils";
+import { cn } from "@/lib/utils";
+import { distanceKm, getPhaseColorClass } from "@/lib/training-utils";
 
 export function WeekSection({ week }: { week: TrainingWeek }) {
   const phaseColor = getPhaseColorClass(week.phase);

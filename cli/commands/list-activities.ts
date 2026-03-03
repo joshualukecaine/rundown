@@ -12,11 +12,15 @@ function subtractDays(dateStr: string, days: number): string {
 }
 
 function getWeekStart(dateStr: string): string {
-  const d = new Date(dateStr + "T00:00:00");
+  const d = new Date(dateStr.slice(0, 10) + "T00:00:00");
   const day = d.getDay();
   const diff = d.getDate() - day + (day === 0 ? -6 : 1);
   d.setDate(diff);
   return d.toISOString().slice(0, 10);
+}
+
+function dateOnly(dateStr: string): string {
+  return dateStr.slice(0, 10);
 }
 
 function formatDuration(seconds: number): string {
@@ -87,8 +91,14 @@ export async function listActivities(options: {
   console.log(`Fetching ${sport} activities: ${oldest} → ${newest}\n`);
 
   const all = await client.listActivities(oldest, newest);
+
+  if (options.raw && !options.sport) {
+    console.log(JSON.stringify(all, null, 2));
+    return;
+  }
+
   const activities = all.filter(
-    (a) => a.type.toLowerCase() === sport.toLowerCase(),
+    (a) => (a.type ?? "").toLowerCase() === sport.toLowerCase(),
   );
 
   if (activities.length === 0) {
@@ -144,7 +154,7 @@ export async function listActivities(options: {
       : "";
 
     console.log(
-      `  ${a.start_date_local}  ${padRight(a.name, 28)}  ${padRight(dist, 7)}  ${padRight(time, 8)}  ${padRight(pace, 10)}  ${padRight(hr, 8)}  ${load}`,
+      `  ${dateOnly(a.start_date_local)}  ${padRight(a.name, 28)}  ${padRight(dist, 7)}  ${padRight(time, 8)}  ${padRight(pace, 10)}  ${padRight(hr, 8)}  ${load}`,
     );
 
     weekDist += a.distance ?? 0;
