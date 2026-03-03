@@ -11,8 +11,16 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "noEmit": true,
+    "incremental": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "plugins": [{ "name": "next" }]
   },
-  "include": ["src/**/*.ts", "cli/**/*.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "cli/**/*.ts", ".next/types/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

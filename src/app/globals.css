@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+    --radius-2xl: calc(var(--radius) + 8px);
+    --radius-3xl: calc(var(--radius) + 12px);
+    --radius-4xl: calc(var(--radius) + 16px);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
+
+    --animate-pulse-soft: pulse-soft 2s ease-in-out infinite;
+
+    @keyframes pulse-soft {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.7; }
+    }
+}
+
+:root {
+    --radius: 0.75rem;
+
+    --background: hsl(263 50% 6%);
+    --foreground: hsl(240 20% 92%);
+
+    --card: hsl(263 45% 10%);
+    --card-foreground: hsl(240 20% 92%);
+
+    --popover: hsl(263 45% 10%);
+    --popover-foreground: hsl(240 20% 92%);
+
+    --primary: hsl(320 80% 60%);
+    --primary-foreground: hsl(0 0% 100%);
+
+    --secondary: hsl(263 40% 16%);
+    --secondary-foreground: hsl(240 20% 92%);
+
+    --muted: hsl(263 35% 14%);
+    --muted-foreground: hsl(263 15% 55%);
+
+    --accent: hsl(185 100% 50%);
+    --accent-foreground: hsl(263 50% 6%);
+
+    --destructive: hsl(0 72% 55%);
+
+    --border: hsl(263 35% 18%);
+    --input: hsl(263 35% 18%);
+    --ring: hsl(320 80% 60%);
+
+    --chart-1: hsl(320 80% 60%);
+    --chart-2: hsl(185 100% 50%);
+    --chart-3: hsl(160 80% 45%);
+    --chart-4: hsl(270 80% 65%);
+    --chart-5: hsl(50 100% 60%);
+
+    --sidebar: hsl(263 48% 8%);
+    --sidebar-foreground: hsl(240 20% 92%);
+    --sidebar-primary: hsl(320 80% 60%);
+    --sidebar-primary-foreground: hsl(0 0% 100%);
+    --sidebar-accent: hsl(263 40% 16%);
+    --sidebar-accent-foreground: hsl(240 20% 92%);
+    --sidebar-border: hsl(263 35% 18%);
+    --sidebar-ring: hsl(320 80% 60%);
+
+    /* Neon tokens */
+    --neon-pink: 320 80% 60%;
+    --neon-cyan: 185 100% 50%;
+    --neon-purple: 270 80% 65%;
+
+    /* Phase colors */
+    --phase-restart: 320 80% 60%;
+    --phase-recovery: 185 100% 50%;
+    --phase-base: 160 80% 45%;
+    --phase-build: 270 80% 65%;
+
+    /* Success */
+    --success: 160 80% 45%;
+
+    /* Glows */
+    --glow-pink: 0 0 20px hsl(320 80% 60% / 0.4);
+    --glow-cyan: 0 0 20px hsl(185 100% 50% / 0.4);
+    --glow-purple: 0 0 20px hsl(270 80% 65% / 0.4);
+}
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+    body {
+        @apply bg-background text-foreground antialiased;
+        font-family: 'Space Grotesk', system-ui, sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Space Grotesk', system-ui, sans-serif;
+        letter-spacing: -0.02em;
+    }
+    code, pre, .font-mono {
+        font-family: 'JetBrains Mono', monospace;
+    }
+}
+
+@layer utilities {
+    /* Phase text colors */
+    .phase-restart { color: hsl(var(--phase-restart)); }
+    .phase-recovery { color: hsl(var(--phase-recovery)); }
+    .phase-base { color: hsl(var(--phase-base)); }
+    .phase-build { color: hsl(var(--phase-build)); }
+
+    /* Phase bg colors */
+    .bg-phase-restart { background-color: hsl(var(--phase-restart)); }
+    .bg-phase-recovery { background-color: hsl(var(--phase-recovery)); }
+    .bg-phase-base { background-color: hsl(var(--phase-base)); }
+    .bg-phase-build { background-color: hsl(var(--phase-build)); }
+
+    /* Neon glows */
+    .neon-glow-pink { box-shadow: var(--glow-pink); }
+    .neon-glow-cyan { box-shadow: var(--glow-cyan); }
+    .neon-glow-purple { box-shadow: var(--glow-purple); }
+
+    /* Neon text */
+    .text-neon-pink { color: hsl(var(--neon-pink)); }
+    .text-neon-cyan { color: hsl(var(--neon-cyan)); }
+    .text-neon-purple { color: hsl(var(--neon-purple)); }
+
+    /* Success */
+    .text-success { color: hsl(var(--success)); }
+    .bg-success { background-color: hsl(var(--success)); }
+    .border-success { border-color: hsl(var(--success)); }
+
+    /* Synthwave card */
+    .synthwave-card {
+        background: linear-gradient(135deg, hsl(263 45% 10%) 0%, hsl(263 48% 12%) 100%);
+        border: 1px solid hsl(263 35% 20%);
+        position: relative;
+    }
+    .synthwave-card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 1px;
+        background: linear-gradient(135deg, hsl(320 80% 60% / 0.15), hsl(185 100% 50% / 0.08), transparent 60%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+    }
+
+    /* Grid background */
+    .synthwave-grid-bg {
+        background-image:
+            linear-gradient(hsl(263 35% 15% / 0.5) 1px, transparent 1px),
+            linear-gradient(90deg, hsl(263 35% 15% / 0.5) 1px, transparent 1px);
+        background-size: 40px 40px;
+    }
+}

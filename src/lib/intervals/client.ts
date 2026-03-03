@@ -3,8 +3,8 @@ import {
   IntervalsAuthError,
   IntervalsNotFoundError,
   IntervalsRateLimitError,
-} from "./errors.js";
-import type { Athlete, CreateEventInput, Event } from "./types.js";
+} from "./errors";
+import type { Activity, Athlete, CreateEventInput, Event } from "./types";
 
 const BASE_URL = "https://intervals.icu/api/v1";
 const DEFAULT_TIMEOUT = 30_000;
@@ -90,6 +90,21 @@ export class IntervalsClient {
     await this.request<void>(
       "DELETE",
       `/athlete/${this.athleteId}/events/${eventId}`,
+    );
+  }
+
+  // --- Activities (completed workouts) ---
+
+  async listActivities(
+    oldest: string,
+    newest: string,
+    type?: string,
+  ): Promise<Activity[]> {
+    const params = new URLSearchParams({ oldest, newest });
+    if (type) params.set("type", type);
+    return this.request<Activity[]>(
+      "GET",
+      `/athlete/${this.athleteId}/activities?${params}`,
     );
   }
 

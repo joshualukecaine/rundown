@@ -73,3 +73,23 @@ export interface Athlete {
   timezone?: string;
   locale?: string;
 }
+
+export interface Activity {
+  id: number;
+  start_date_local: string;
+  type: string;
+  name: string;
+  distance?: number;          // metres
+  moving_time?: number;       // seconds
+  elapsed_time?: number;      // seconds
+  average_speed?: number;     // m/s
+  max_speed?: number;         // m/s
+  average_heartrate?: number;
+  max_heartrate?: number;
+  average_watts?: number;
+  icu_training_load?: number;
+  icu_atl?: number;
+  icu_ctl?: number;
+  calories?: number;
+  perceived_exertion?: number;
+}

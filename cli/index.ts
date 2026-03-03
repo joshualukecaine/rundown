@@ -2,6 +2,7 @@ import "dotenv/config";
 import { pushPlan } from "./commands/push-plan.js";
 import { listEvents } from "./commands/list-events.js";
 import { clearEvents } from "./commands/clear-events.js";
+import { listActivities } from "./commands/list-activities.js";
 
 const [command, ...args] = process.argv.slice(2);
 
@@ -64,6 +65,18 @@ async function main() {
         break;
       }
 
+      case "activities": {
+        await listActivities({
+          from: flags.from as string | undefined,
+          to: flags.to as string | undefined,
+          weeks: flags.weeks ? parseInt(flags.weeks as string, 10) : undefined,
+          sport: flags.sport as string | undefined,
+          summary: !!flags.summary,
+          raw: !!flags.raw,
+        });
+        break;
+      }
+
       default:
         console.log(`Training CLI — Intervals.icu integration
 
@@ -80,6 +93,14 @@ Commands:
     --from YYYY-MM-DD                  Start date (required)
     --to YYYY-MM-DD                    End date (required)
     --dry-run                          Preview without deleting
+
+  activities                           List completed activities
+    --from YYYY-MM-DD                  Start date (default: 12 weeks ago)
+    --to YYYY-MM-DD                    End date (default: today)
+    --weeks N                          Last N weeks (shorthand for --from)
+    --sport TYPE                       Sport type (default: Run)
+    --summary                          Weekly totals only
+    --raw                              Output raw JSON
 `);
         if (command) {
           console.error(`Unknown command: ${command}`);

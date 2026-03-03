@@ -1,15 +1,16 @@
-export { IntervalsClient } from "./client.js";
+export { IntervalsClient } from "./client";
 export {
   IntervalsAPIError,
   IntervalsAuthError,
   IntervalsNotFoundError,
   IntervalsRateLimitError,
-} from "./errors.js";
+} from "./errors";
 export type {
+  Activity,
   Athlete,
   CreateEventInput,
   Event,
   EventCategory,
   SportType,
   TargetType,
-} from "./types.js";
+} from "./types";
