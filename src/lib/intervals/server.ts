@@ -1,10 +1,11 @@
 import { IntervalsClient } from "./client";
+import { getSession } from "@/lib/auth/session";
 
-let client: IntervalsClient | null = null;
-
-export function getClient(): IntervalsClient {
-  if (!client) {
-    client = IntervalsClient.fromEnv();
+export async function getClient(): Promise<IntervalsClient> {
+  const session = await getSession();
+  if (session.accessToken) {
+    return IntervalsClient.fromBearerToken(session.accessToken, session.athleteId);
   }
-  return client;
+
+  throw new Error("Not authenticated");
 }

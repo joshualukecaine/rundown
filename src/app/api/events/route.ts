@@ -20,7 +20,8 @@ export async function GET(request: NextRequest) {
   const { oldest = today, newest = today, category } = parsed.data;
 
   try {
-    const events = await getClient().listEvents(oldest, newest, category);
+    const client = await getClient();
+    const events = await client.listEvents(oldest, newest, category);
     return NextResponse.json(events);
   } catch (error) {
     if (error instanceof IntervalsAPIError) {
@@ -44,7 +45,8 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    const event = await getClient().createEvent(parsed.data);
+    const client = await getClient();
+    const event = await client.createEvent(parsed.data);
     return NextResponse.json(event, { status: 201 });
   } catch (error) {
     if (error instanceof IntervalsAPIError) {

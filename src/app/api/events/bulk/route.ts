@@ -20,7 +20,8 @@ export async function POST(request: NextRequest) {
   const upsert = searchParams.get("upsert") === "true";
 
   try {
-    const events = await getClient().createEventsBulk(parsed.data, { upsert });
+    const client = await getClient();
+    const events = await client.createEventsBulk(parsed.data, { upsert });
     return NextResponse.json(events, { status: 201 });
   } catch (error) {
     if (error instanceof IntervalsAPIError) {

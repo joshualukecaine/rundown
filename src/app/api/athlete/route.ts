@@ -4,7 +4,8 @@ import { IntervalsAPIError } from "@/lib/intervals";
 
 export async function GET() {
   try {
-    const athlete = await getClient().getAthlete();
+    const client = await getClient();
+    const athlete = await client.getAthlete();
     return NextResponse.json(athlete);
   } catch (error) {
     if (error instanceof IntervalsAPIError) {

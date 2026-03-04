@@ -4,8 +4,8 @@ import { Providers } from "@/components/layout/providers";
 import { Nav } from "@/components/layout/nav";
 
 export const metadata: Metadata = {
-  title: "Training Dashboard",
-  description: "Intervals.icu training plan dashboard",
+  title: "RunDown",
+  description: "Your training at a glance",
 };
 
 export default function RootLayout({

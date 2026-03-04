@@ -9,7 +9,8 @@ export default async function SchedulePage() {
   endDate.setDate(endDate.getDate() + 90);
   const end = endDate.toISOString().slice(0, 10);
 
-  const events = await getClient().listEvents(start, end, "WORKOUT");
+  const client = await getClient();
+  const events = await client.listEvents(start, end, "WORKOUT");
   const weeks = groupEventsByWeek(events);
 
   return (

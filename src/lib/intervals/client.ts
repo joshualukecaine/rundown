@@ -28,6 +28,13 @@ export class IntervalsClient {
     this.athleteId = athleteId;
   }
 
+  static fromBearerToken(token: string, athleteId: string): IntervalsClient {
+    const client = Object.create(IntervalsClient.prototype) as IntervalsClient;
+    client.authHeader = `Bearer ${token}`;
+    client.athleteId = athleteId;
+    return client;
+  }
+
   static fromEnv(): IntervalsClient {
     const apiKey = process.env.INTERVALS_API_KEY;
     const athleteId = process.env.INTERVALS_ATHLETE_ID;

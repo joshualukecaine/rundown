@@ -26,7 +26,8 @@ export async function PUT(
   }
 
   try {
-    const event = await getClient().updateEvent(eventId, parsed.data);
+    const client = await getClient();
+    const event = await client.updateEvent(eventId, parsed.data);
     return NextResponse.json(event);
   } catch (error) {
     if (error instanceof IntervalsAPIError) {
@@ -47,7 +48,8 @@ export async function DELETE(
   }
 
   try {
-    await getClient().deleteEvent(eventId);
+    const client = await getClient();
+    await client.deleteEvent(eventId);
     return new NextResponse(null, { status: 204 });
   } catch (error) {
     if (error instanceof IntervalsAPIError) {
