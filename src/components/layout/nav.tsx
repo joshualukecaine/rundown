@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -16,11 +16,13 @@ const navItems = [
 export function Nav() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const prevPathname = useRef(pathname);
 
   // Close mobile menu on route change
-  useEffect(() => {
-    setMobileOpen(false);
-  }, [pathname]);
+  if (prevPathname.current !== pathname) {
+    prevPathname.current = pathname;
+    if (mobileOpen) setMobileOpen(false);
+  }
 
   if (pathname === "/login") return null;
 
