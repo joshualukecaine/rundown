@@ -18,7 +18,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-background synthwave-grid-bg antialiased">
         <Providers>
           <Nav />
-          <main className="mx-auto max-w-[1400px] px-8 py-6">{children}</main>
+          <main className="mx-auto max-w-[1400px] px-4 py-6 md:px-8">{children}</main>
         </Providers>
       </body>
     </html>
