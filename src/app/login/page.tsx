@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import logo from "../../../public/logo.png";
 
 export default function LoginPage() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center">
       <div className="synthwave-card w-full max-w-sm rounded-xl p-8 text-center">
         <div className="mb-6 flex justify-center">
-          <Image src="/logo.png" alt="RunDown" width={120} height={120} />
+          <Image src={logo} alt="RunDown" width={120} height={120} />
         </div>
 
         <p className="mb-8 text-sm text-muted-foreground">

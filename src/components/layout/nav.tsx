@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, Calendar, LogOut } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logo from "../../../public/logo.png";
 
 const navItems = [
   { href: "/", label: "Dashboard", icon: Home },
@@ -19,7 +20,7 @@ export function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-14 max-w-[1400px] items-center gap-6 px-8">
-        <Image src="/logo.png" alt="RunDown" width={32} height={32} className="rounded" />
+        <Image src={logo} alt="RunDown" width={32} height={32} className="rounded" />
         <nav className="flex items-center gap-1">
           {navItems.map(({ href, label, icon: Icon }) => {
             const active = pathname === href;
