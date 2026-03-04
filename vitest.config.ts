@@ -15,6 +15,8 @@ export default defineConfig({
         'src/lib/training-utils.ts',
         'src/lib/intervals/client.ts',
         'src/lib/intervals/errors.ts',
+        'src/lib/auth/oauth.ts',
+        'src/middleware.ts',
       ],
       exclude: [],
       thresholds: { lines: 80, functions: 80, branches: 80, statements: 80 },

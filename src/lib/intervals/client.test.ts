@@ -110,6 +110,30 @@ describe("IntervalsClient.deleteEvent", () => {
   });
 });
 
+describe("IntervalsClient.fromBearerToken", () => {
+  it("should send Bearer auth header instead of Basic", async () => {
+    const fetchMock = mockFetch(200, []);
+    vi.stubGlobal("fetch", fetchMock);
+
+    const client = IntervalsClient.fromBearerToken("oauth-token-123", "i0");
+    await client.listEvents("2026-03-01", "2026-03-31");
+
+    const [, options] = fetchMock.mock.calls[0] as [string, { headers: Record<string, string> }];
+    expect(options.headers["Authorization"]).toBe("Bearer oauth-token-123");
+  });
+
+  it("should use the provided athlete ID in request URLs", async () => {
+    const fetchMock = mockFetch(200, []);
+    vi.stubGlobal("fetch", fetchMock);
+
+    const client = IntervalsClient.fromBearerToken("token", "i219999");
+    await client.listEvents("2026-03-01", "2026-03-31");
+
+    const [url] = fetchMock.mock.calls[0] as [string];
+    expect(url).toContain("/athlete/i219999/events");
+  });
+});
+
 describe("IntervalsClient Authorization header", () => {
   it("should send Basic auth with API_KEY prefix and base64-encoded key", async () => {
     const fetchMock = mockFetch(200, []);

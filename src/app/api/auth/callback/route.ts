@@ -1,12 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSession } from "@/lib/auth/session";
-
-interface TokenResponse {
-  token_type: string;
-  access_token: string;
-  scope: string;
-  athlete: { id: string; name: string };
-}
+import { exchangeCodeForToken, OAuthTokenError } from "@/lib/auth/oauth";
 
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
@@ -31,27 +25,15 @@ export async function GET(request: NextRequest) {
   // Exchange code for token
   const redirectUri = new URL("/api/auth/callback", request.nextUrl.origin).toString();
 
-  const tokenResponse = await fetch("https://intervals.icu/api/oauth/token", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: new URLSearchParams({
-      client_id: process.env.RUNDOWN_CLIENT_ID!,
-      client_secret: process.env.RUNDOWN_SECRET!,
-      grant_type: "authorization_code",
-      code,
-      redirect_uri: redirectUri,
-    }),
-  });
-
-  if (!tokenResponse.ok) {
-    const errorBody = await tokenResponse.text().catch(() => "");
-    console.error("Token exchange failed:", tokenResponse.status, errorBody);
+  let data;
+  try {
+    data = await exchangeCodeForToken(code, redirectUri);
+  } catch (err) {
+    if (err instanceof OAuthTokenError) {
+      console.error("Token exchange failed:", err.status, err.body);
+    }
     return NextResponse.redirect(new URL("/login?error=token_failed", request.url));
   }
-
-  const data = (await tokenResponse.json()) as TokenResponse;
 
   // Store in session
   const session = await getSession();
