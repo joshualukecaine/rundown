@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -16,15 +16,10 @@ const navItems = [
 export function Nav() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const prevPathname = useRef(pathname);
-
-  // Close mobile menu on route change
-  if (prevPathname.current !== pathname) {
-    prevPathname.current = pathname;
-    if (mobileOpen) setMobileOpen(false);
-  }
 
   if (pathname === "/login") return null;
+
+  const closeMenu = () => setMobileOpen(false);
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
@@ -85,6 +80,7 @@ export function Nav() {
                 <Link
                   key={href}
                   href={href}
+                  onClick={closeMenu}
                   className={cn(
                     "flex items-center gap-2 rounded-md px-3 py-2.5 text-sm font-medium transition-all",
                     active
@@ -99,6 +95,7 @@ export function Nav() {
             })}
             <Link
               href="/api/auth/logout"
+              onClick={closeMenu}
               className="flex items-center gap-2 rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground transition-all hover:bg-secondary hover:text-foreground"
             >
               <LogOut className="h-4 w-4" />
