@@ -4,10 +4,14 @@ import {
   distanceKm,
   getDescriptionSummary,
   getEventDistance,
+  getEventDuration,
   getPhase,
   getBasePhase,
   getPhaseColorClass,
   getPhaseBgClass,
+  getActivityLabel,
+  parseWorkoutDescription,
+  expandWorkoutSteps,
   getNextEvent,
   groupEventsByWeek,
 } from "./training-utils";
@@ -87,6 +91,33 @@ describe("getEventDistance", () => {
   it("should fall back to name parsing when distance field is 0", () => {
     const event = makeEvent({ start_date_local: "2026-03-03", name: "Run 5km", distance: 0 });
     expect(getEventDistance(event)).toBe(5000);
+  });
+});
+
+describe("getEventDuration", () => {
+  it("should return moving_time in minutes when present", () => {
+    const event = makeEvent({ start_date_local: "2026-03-03", name: "Run: 23m", moving_time: 1380 });
+    expect(getEventDuration(event)).toBe(23);
+  });
+
+  it("should parse minutes from event name when moving_time is absent", () => {
+    const event = makeEvent({ start_date_local: "2026-03-03", name: "Run: 23m" });
+    expect(getEventDuration(event)).toBe(23);
+  });
+
+  it("should parse minutes from Long Run name", () => {
+    const event = makeEvent({ start_date_local: "2026-03-03", name: "Long Run: 44m" });
+    expect(getEventDuration(event)).toBe(44);
+  });
+
+  it("should return 0 when no duration available", () => {
+    const event = makeEvent({ start_date_local: "2026-03-03", name: "Rest day" });
+    expect(getEventDuration(event)).toBe(0);
+  });
+
+  it("should prefer moving_time over name parsing", () => {
+    const event = makeEvent({ start_date_local: "2026-03-03", name: "Run: 23m", moving_time: 900 });
+    expect(getEventDuration(event)).toBe(15);
   });
 });
 
@@ -250,6 +281,15 @@ describe("groupEventsByWeek", () => {
     expect(weeks[0].totalDistance).toBe(15000);
   });
 
+  it("should calculate totalDuration from all events in the week", () => {
+    const events = [
+      makeEvent({ start_date_local: "2026-03-02", name: "Run: 23m", moving_time: 1380, tags: ["Base"] }),
+      makeEvent({ id: 2, start_date_local: "2026-03-04", name: "Long Run: 44m", moving_time: 2640, tags: ["Base"] }),
+    ];
+    const weeks = groupEventsByWeek(events);
+    expect(weeks[0].totalDuration).toBe(67);
+  });
+
   it("should calculate completedDistance from past events only", () => {
     // System time is 2026-03-04 (Wednesday). Events before that date are past.
     const events = [
@@ -300,5 +340,231 @@ describe("groupEventsByWeek", () => {
     ];
     const weeks = groupEventsByWeek(events);
     expect(weeks[0].phase).toBe("Base Wk1");
+  });
+});
+
+describe("getActivityLabel", () => {
+  it.each([
+    ["Run", "Run"],
+    ["TrailRun", "Run"],
+    ["VirtualRun", "Run"],
+    ["Ride", "Ride"],
+    ["VirtualRide", "Ride"],
+    ["Swim", "Swim"],
+    ["WeightTraining", "Weights"],
+    ["Hike", "Hike"],
+    ["Walk", "Walk"],
+  ] as const)('should map sport type "%s" to "%s"', (type, expected) => {
+    const event = makeEvent({ start_date_local: "2026-03-03", name: "Session", type });
+    expect(getActivityLabel(event)).toBe(expected);
+  });
+
+  it("should return Session for unknown sport type", () => {
+    const event = makeEvent({ start_date_local: "2026-03-03", name: "Session", type: "Rowing" });
+    expect(getActivityLabel(event)).toBe("Session");
+  });
+
+  it("should return Session when type is undefined", () => {
+    const event = makeEvent({ start_date_local: "2026-03-03", name: "Session" });
+    expect(getActivityLabel(event)).toBe("Session");
+  });
+});
+
+describe("parseWorkoutDescription", () => {
+  it("should return empty array for undefined", () => {
+    expect(parseWorkoutDescription(undefined)).toEqual([]);
+  });
+
+  it("should return empty array for empty string", () => {
+    expect(parseWorkoutDescription("")).toEqual([]);
+  });
+
+  it("should return empty array for single-line description (summary only)", () => {
+    expect(parseWorkoutDescription("Easy run")).toEqual([]);
+  });
+
+  it("should parse a section with steps", () => {
+    const desc = [
+      "Easy run with warm up",
+      "Warm Up",
+      "- 5m Z1 HR (96-121bpm)",
+    ].join("\n");
+
+    const sections = parseWorkoutDescription(desc);
+    expect(sections).toHaveLength(1);
+    expect(sections[0].name).toBe("Warm Up");
+    expect(sections[0].repeat).toBe(1);
+    expect(sections[0].steps).toHaveLength(1);
+    expect(sections[0].steps[0].duration).toBe(5);
+    expect(sections[0].steps[0].zone).toBe("Z1");
+    expect(sections[0].steps[0].zoneNumber).toBe(1);
+  });
+
+  it("should parse multiple sections", () => {
+    const desc = [
+      "Run/walk intervals",
+      "Warm Up",
+      "- 2m Z1 HR",
+      "Intervals 3x",
+      "- Run 3m Z2 HR",
+      "- Walk 1m Z1 HR",
+      "Cool Down",
+      "- 2m Z1 HR",
+    ].join("\n");
+
+    const sections = parseWorkoutDescription(desc);
+    expect(sections).toHaveLength(3);
+    expect(sections[0].name).toBe("Warm Up");
+    expect(sections[1].name).toBe("Intervals 3x");
+    expect(sections[1].repeat).toBe(3);
+    expect(sections[1].steps).toHaveLength(2);
+    expect(sections[2].name).toBe("Cool Down");
+  });
+
+  it("should extract repeat count from section name", () => {
+    const desc = [
+      "Summary line",
+      "Walk/Run 7x",
+      "- Run 3m Z2 HR",
+    ].join("\n");
+
+    const sections = parseWorkoutDescription(desc);
+    expect(sections[0].repeat).toBe(7);
+  });
+
+  it("should default repeat to 1 when no count", () => {
+    const desc = [
+      "Summary line",
+      "Warm Up",
+      "- 5m Z1 HR",
+    ].join("\n");
+
+    const sections = parseWorkoutDescription(desc);
+    expect(sections[0].repeat).toBe(1);
+  });
+
+  it("should extract step labels like Run and Walk", () => {
+    const desc = [
+      "Summary line",
+      "Intervals 2x",
+      "- Run 3m Z2 HR",
+      "- Walk 1m Z1 HR",
+    ].join("\n");
+
+    const sections = parseWorkoutDescription(desc);
+    expect(sections[0].steps[0].label).toBe("Run");
+    expect(sections[0].steps[1].label).toBe("Walk");
+  });
+
+  it("should leave label undefined when step has no label prefix", () => {
+    const desc = [
+      "Summary line",
+      "Warm Up",
+      "- 2m Z1 HR",
+    ].join("\n");
+
+    const sections = parseWorkoutDescription(desc);
+    expect(sections[0].steps[0].label).toBeUndefined();
+  });
+
+  it("should strip intensity= parameter from raw text", () => {
+    const desc = [
+      "Summary line",
+      "Warm Up",
+      "- 2m Z1 HR intensity=warmup",
+    ].join("\n");
+
+    const sections = parseWorkoutDescription(desc);
+    expect(sections[0].steps[0].raw).not.toContain("intensity=");
+    expect(sections[0].steps[0].raw).toContain("2m Z1 HR");
+  });
+
+  it("should preserve HR range in raw text", () => {
+    const desc = [
+      "Summary line",
+      "Warm Up",
+      "- 5m Z1 HR (96-121bpm)",
+    ].join("\n");
+
+    const sections = parseWorkoutDescription(desc);
+    expect(sections[0].steps[0].raw).toContain("(96-121bpm)");
+  });
+
+  it("should ignore step lines before any section header", () => {
+    const desc = [
+      "Summary line",
+      "- 5m Z1 HR",
+      "Warm Up",
+      "- 2m Z1 HR",
+    ].join("\n");
+
+    const sections = parseWorkoutDescription(desc);
+    expect(sections).toHaveLength(1);
+    expect(sections[0].name).toBe("Warm Up");
+    expect(sections[0].steps).toHaveLength(1);
+  });
+});
+
+describe("expandWorkoutSteps", () => {
+  it("should return empty array for empty sections", () => {
+    expect(expandWorkoutSteps([])).toEqual([]);
+  });
+
+  it("should return steps with section name for repeat=1", () => {
+    const sections = [{
+      name: "Warm Up",
+      repeat: 1,
+      steps: [{ duration: 5, zone: "Z1", zoneNumber: 1, raw: "5m Z1 HR" }],
+    }];
+
+    const result = expandWorkoutSteps(sections);
+    expect(result).toHaveLength(1);
+    expect(result[0].section).toBe("Warm Up");
+    expect(result[0].duration).toBe(5);
+  });
+
+  it("should repeat steps according to repeat count", () => {
+    const sections = [{
+      name: "Intervals 3x",
+      repeat: 3,
+      steps: [
+        { duration: 3, zone: "Z2", zoneNumber: 2, raw: "Run 3m Z2 HR" },
+        { duration: 1, zone: "Z1", zoneNumber: 1, raw: "Walk 1m Z1 HR" },
+      ],
+    }];
+
+    const result = expandWorkoutSteps(sections);
+    expect(result).toHaveLength(6);
+    expect(result.every((s) => s.section === "Intervals 3x")).toBe(true);
+    expect(result[0].zoneNumber).toBe(2);
+    expect(result[1].zoneNumber).toBe(1);
+    expect(result[2].zoneNumber).toBe(2);
+  });
+
+  it("should flatten multiple sections in order", () => {
+    const sections = [
+      {
+        name: "Warm Up",
+        repeat: 1,
+        steps: [{ duration: 5, zone: "Z1", zoneNumber: 1, raw: "5m Z1 HR" }],
+      },
+      {
+        name: "Main Set 2x",
+        repeat: 2,
+        steps: [{ duration: 3, zone: "Z2", zoneNumber: 2, raw: "3m Z2 HR" }],
+      },
+      {
+        name: "Cool Down",
+        repeat: 1,
+        steps: [{ duration: 3, zone: "Z1", zoneNumber: 1, raw: "3m Z1 HR" }],
+      },
+    ];
+
+    const result = expandWorkoutSteps(sections);
+    expect(result).toHaveLength(4);
+    expect(result[0].section).toBe("Warm Up");
+    expect(result[1].section).toBe("Main Set 2x");
+    expect(result[2].section).toBe("Main Set 2x");
+    expect(result[3].section).toBe("Cool Down");
   });
 });

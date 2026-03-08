@@ -12,6 +12,8 @@ export interface TrainingWeek {
   events: Event[];
   /** Total planned distance for the week in metres */
   totalDistance: number;
+  /** Total planned duration for the week in minutes */
+  totalDuration: number;
   /** Distance completed so far (past events) in metres */
   completedDistance: number;
   /** Whether this is the current week */

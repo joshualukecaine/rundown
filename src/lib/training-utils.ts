@@ -30,6 +30,17 @@ export function getEventDistance(event: Event): number {
   return 0;
 }
 
+/**
+ * Get the planned duration in minutes for an event.
+ * Uses moving_time from the API (seconds), or parses from name (e.g. "Run: 23m" → 23).
+ */
+export function getEventDuration(event: Event): number {
+  if (event.moving_time && event.moving_time > 0) return Math.round(event.moving_time / 60);
+  const match = event.name.match(/([\d]+)\s*m$/i);
+  if (match) return parseInt(match[1], 10);
+  return 0;
+}
+
 /** Extract phase name from event tags. Falls back to "Unknown". */
 export function getPhase(event: Event): string {
   return event.tags?.[0] ?? "Unknown";
@@ -64,6 +75,122 @@ export function getPhaseBgClass(phase: string): string {
     case "Build": return "bg-phase-build";
     default: return "bg-phase-restart";
   }
+}
+
+/** Get a human-readable activity label from an event's sport type */
+export function getActivityLabel(event: Event): string {
+  switch (event.type) {
+    case "Run":
+    case "TrailRun":
+    case "VirtualRun":
+      return "Run";
+    case "Ride":
+    case "VirtualRide":
+      return "Ride";
+    case "Swim":
+      return "Swim";
+    case "WeightTraining":
+      return "Weights";
+    case "Hike":
+      return "Hike";
+    case "Walk":
+      return "Walk";
+    default:
+      return "Session";
+  }
+}
+
+export interface WorkoutStep {
+  /** Duration in minutes */
+  duration: number;
+  /** Zone label, e.g. "Z1", "Z2" */
+  zone: string;
+  /** Zone number (1-5) */
+  zoneNumber: number;
+  /** Raw step text, e.g. "2m Z1 HR (96-121bpm)" */
+  raw: string;
+  /** Optional step label, e.g. "Run", "Walk" */
+  label?: string;
+}
+
+export interface WorkoutSection {
+  /** Section name, e.g. "Warm Up", "Walk/Run 7x", "Cool Down" */
+  name: string;
+  /** Repeat count (default 1) */
+  repeat: number;
+  /** Steps within this section */
+  steps: WorkoutStep[];
+}
+
+/**
+ * Parse a workout description into structured sections with steps.
+ *
+ * Expected format:
+ *   Summary line (skipped)
+ *   Section Name [Nx]
+ *   - <duration>m Z<n> HR [(...)]
+ *   - <duration>m Z<n> HR [(...)]
+ *   Another Section
+ *   - <duration>m Z<n> HR [(...)]
+ */
+export function parseWorkoutDescription(description: string | undefined): WorkoutSection[] {
+  if (!description) return [];
+  const lines = description.split("\n").filter((l) => l.trim().length > 0);
+  if (lines.length < 2) return [];
+
+  const sections: WorkoutSection[] = [];
+  let current: WorkoutSection | null = null;
+
+  // Skip first line (summary)
+  for (let i = 1; i < lines.length; i++) {
+    const line = lines[i].trim();
+
+    if (line.startsWith("- ")) {
+      // Step line: "- Run 2m Z2 HR" or "- 1m Z1 HR intensity=warmup"
+      const stepMatch = line.match(/(\d+)m\s+Z(\d)/);
+      if (stepMatch && current) {
+        let raw = line.slice(2).trim();
+        // Strip intensity= parameter (used by Garmin, not needed in display)
+        raw = raw.replace(/\s*intensity=\w+/, "");
+        // Extract optional label (e.g. "Run", "Walk") before the duration
+        const labelMatch = raw.match(/^([A-Za-z]+)\s+\d+m/);
+        current.steps.push({
+          duration: parseInt(stepMatch[1], 10),
+          zone: `Z${stepMatch[2]}`,
+          zoneNumber: parseInt(stepMatch[2], 10),
+          raw,
+          label: labelMatch ? labelMatch[1] : undefined,
+        });
+      }
+    } else {
+      // Section header: "Warm Up", "Walk/Run 7x", "Cool Down"
+      const repeatMatch = line.match(/(\d+)x\s*$/);
+      current = {
+        name: line,
+        repeat: repeatMatch ? parseInt(repeatMatch[1], 10) : 1,
+        steps: [],
+      };
+      sections.push(current);
+    }
+  }
+
+  return sections;
+}
+
+/**
+ * Expand parsed workout sections into a flat list of steps
+ * (with repeats unrolled) for visualization.
+ */
+export function expandWorkoutSteps(sections: WorkoutSection[]): (WorkoutStep & { section: string })[] {
+  const steps: (WorkoutStep & { section: string })[] = [];
+  for (const section of sections) {
+    for (let r = 0; r < section.repeat; r++) {
+      for (const step of section.steps) {
+        steps.push({ ...step, section: section.name });
+      }
+    }
+  }
+  return steps;
 }
 
 /** Get the next upcoming event (today or later) */
@@ -101,6 +228,7 @@ export function groupEventsByWeek(events: Event[]): TrainingWeek[] {
       phase: getPhase(weekEvents[0]),
       events: weekEvents,
       totalDistance: weekEvents.reduce((sum, e) => sum + getEventDistance(e), 0),
+      totalDuration: weekEvents.reduce((sum, e) => sum + getEventDuration(e), 0),
       completedDistance: weekEvents
         .filter((e) => e.start_date_local.slice(0, 10) < today)
         .reduce((sum, e) => sum + getEventDistance(e), 0),
