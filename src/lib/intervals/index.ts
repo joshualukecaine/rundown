@@ -11,6 +11,8 @@ export type {
   CreateEventInput,
   Event,
   EventCategory,
+  Interval,
+  IntervalsDTO,
   SportType,
   TargetType,
 } from "./types";

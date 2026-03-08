@@ -75,6 +75,18 @@ export interface Athlete {
   locale?: string;
 }
 
+export interface Interval {
+  zone: number;
+  average_speed: number;
+  moving_time: number;
+  distance: number;
+  average_heartrate: number;
+}
+
+export interface IntervalsDTO {
+  icu_intervals: Interval[];
+}
+
 export interface Activity {
   id: number;
   start_date_local: string;

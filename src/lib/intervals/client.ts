@@ -4,7 +4,7 @@ import {
   IntervalsNotFoundError,
   IntervalsRateLimitError,
 } from "./errors";
-import type { Activity, Athlete, CreateEventInput, Event } from "./types";
+import type { Activity, Athlete, CreateEventInput, Event, IntervalsDTO } from "./types";
 
 const BASE_URL = "https://intervals.icu/api/v1";
 const DEFAULT_TIMEOUT = 30_000;
@@ -112,6 +112,13 @@ export class IntervalsClient {
     return this.request<Activity[]>(
       "GET",
       `/athlete/${this.athleteId}/activities?${params}`,
+    );
+  }
+
+  async getActivityIntervals(activityId: number): Promise<IntervalsDTO> {
+    return this.request<IntervalsDTO>(
+      "GET",
+      `/activity/${activityId}/intervals`,
     );
   }
 
