@@ -191,14 +191,14 @@ This description:
 ```
 First run back. FLAT. Stop if dizzy.
 Warm Up
-- 2m Z1 HR
+- 2m Z1 HR intensity=warmup
 
 Walk/Run 5x
 - 1m Z2 HR
 - 1m Z1 HR
 
 Cool Down
-- 1m Z1 HR
+- 1m Z1 HR intensity=cooldown
 ```
 
 Gets parsed into this `workout_doc`:
@@ -238,6 +238,18 @@ On Garmin, this shows as discrete steps: warm up → 5 repeats of run/walk → c
 | Power (% FTP) | `60%`, `88-94%` | `- 8m 88-94%` |
 | Repeats | `Nx` after section | `Main set 6x` |
 | Sections | Plain text headers | `Warm Up`, `Cool Down` |
+| Intensity | `intensity=<type>` | `- 5m Z1 HR intensity=warmup` |
+
+#### Intensity types
+
+The `intensity=` parameter controls how a step appears on the Garmin watch. Without it, all steps show as "Run" (active).
+
+| Intensity | Garmin display | Use for |
+|-----------|---------------|---------|
+| `warmup` | "Warm Up" | Warm-up steps |
+| `cooldown` | "Cool Down" | Cool-down steps |
+| `active` | "Run" (default) | Main work steps |
+| `recovery` | "Recovery" | Rest/walk intervals |
 
 ### How we use it
 
