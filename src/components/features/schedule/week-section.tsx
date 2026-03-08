@@ -1,7 +1,7 @@
 import type { TrainingWeek } from "@/types";
 import { WorkoutRow } from "./workout-row";
 import { cn } from "@/lib/utils";
-import { distanceKm, getPhaseColorClass } from "@/lib/training-utils";
+import { getPhaseColorClass } from "@/lib/training-utils";
 
 export function WeekSection({ week }: { week: TrainingWeek }) {
   const phaseColor = getPhaseColorClass(week.phase);
@@ -37,7 +37,7 @@ export function WeekSection({ week }: { week: TrainingWeek }) {
           )}
         </div>
         <span className="text-sm font-semibold text-muted-foreground font-mono">
-          {distanceKm(week.totalDistance)} km
+          {week.totalDuration} min
         </span>
       </div>
 

@@ -1,7 +1,7 @@
 import type { TrainingWeek } from "@/types";
 import { CheckCircle2, Circle } from "lucide-react";
 import { todayISO } from "@/lib/date-utils";
-import { distanceKm, getPhaseColorClass, getEventDistance } from "@/lib/training-utils";
+import { getPhaseColorClass, getEventDuration } from "@/lib/training-utils";
 
 export function WeekSummaryCard({ week }: { week: TrainingWeek | null }) {
   if (!week) {
@@ -41,12 +41,12 @@ export function WeekSummaryCard({ week }: { week: TrainingWeek | null }) {
       <div className="grid grid-cols-2 gap-4 mb-4">
         <div>
           <p className="text-2xl font-bold font-mono">
-            {distanceKm(week.totalDistance)}{" "}
+            {week.totalDuration}{" "}
             <span className="text-sm font-normal text-muted-foreground">
-              km
+              min
             </span>
           </p>
-          <p className="text-xs text-muted-foreground">Total distance</p>
+          <p className="text-xs text-muted-foreground">Total duration</p>
         </div>
         <div>
           <p className="text-2xl font-bold font-mono">
@@ -55,7 +55,7 @@ export function WeekSummaryCard({ week }: { week: TrainingWeek | null }) {
               /{total}
             </span>
           </p>
-          <p className="text-xs text-muted-foreground">Runs completed</p>
+          <p className="text-xs text-muted-foreground">Sessions completed</p>
         </div>
       </div>
 
@@ -75,7 +75,7 @@ export function WeekSummaryCard({ week }: { week: TrainingWeek | null }) {
               <span
                 className={`font-mono ${isPast ? "text-success line-through" : ""}`}
               >
-                {distanceKm(getEventDistance(e))}km
+                {getEventDuration(e)}m
               </span>
             </div>
           );

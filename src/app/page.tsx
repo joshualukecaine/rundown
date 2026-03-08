@@ -1,7 +1,7 @@
 import { getClient } from "@/lib/intervals/server";
 import { groupEventsByWeek, getNextEvent } from "@/lib/training-utils";
 import { todayISO } from "@/lib/date-utils";
-import { NextRunCard } from "@/components/features/dashboard/next-run-card";
+import { NextActivityCard } from "@/components/features/dashboard/next-run-card";
 import { WeekSummaryCard } from "@/components/features/dashboard/week-summary-card";
 import { VolumeChart } from "@/components/features/dashboard/volume-chart";
 
@@ -25,7 +25,7 @@ export default async function HomePage() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
-        <NextRunCard event={nextEvent} />
+        <NextActivityCard event={nextEvent} />
         <WeekSummaryCard week={currentWeek} />
       </div>
 

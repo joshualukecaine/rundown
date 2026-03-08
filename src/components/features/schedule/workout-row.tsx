@@ -1,7 +1,7 @@
 import type { Event } from "@/lib/intervals";
 import { CheckCircle2, Circle } from "lucide-react";
 import { todayISO, formatDate } from "@/lib/date-utils";
-import { distanceKm, getDescriptionSummary, getEventDistance } from "@/lib/training-utils";
+import { getDescriptionSummary, getEventDuration } from "@/lib/training-utils";
 
 export function WorkoutRow({ event }: { event: Event }) {
   const today = todayISO();
@@ -35,7 +35,7 @@ export function WorkoutRow({ event }: { event: Event }) {
         <p
           className={`text-sm font-bold font-mono ${!isPast ? "text-foreground" : ""}`}
         >
-          {getEventDistance(event) > 0 ? `${distanceKm(getEventDistance(event))} km` : ""}
+          {getEventDuration(event) > 0 ? `${getEventDuration(event)} min` : ""}
         </p>
       </div>
     </div>
