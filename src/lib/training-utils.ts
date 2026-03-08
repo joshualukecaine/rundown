@@ -79,7 +79,12 @@ export function getPhaseBgClass(phase: string): string {
 
 /** Get a human-readable activity label from an event's sport type */
 export function getActivityLabel(event: Event): string {
-  switch (event.type) {
+  return getSportLabel(event.type);
+}
+
+/** Map a sport type string to a display label */
+export function getSportLabel(type: string | undefined): string {
+  switch (type) {
     case "Run":
     case "TrailRun":
     case "VirtualRun":
@@ -97,6 +102,17 @@ export function getActivityLabel(event: Event): string {
       return "Walk";
     default:
       return "Session";
+  }
+}
+
+/** Get sport-type color CSS class */
+export function getSportColorClass(type: string | undefined): string {
+  switch (getSportLabel(type)) {
+    case "Run": return "phase-base";
+    case "Ride": return "phase-build";
+    case "Swim": return "phase-restart";
+    case "Weights": return "phase-recovery";
+    default: return "phase-restart";
   }
 }
 

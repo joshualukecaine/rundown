@@ -6,8 +6,7 @@ import { formatDateLong } from "@/lib/date-utils";
 import {
   distanceKm,
   getDescriptionSummary,
-  getPhaseColorClass,
-  getPhase,
+  getSportColorClass,
   getActivityLabel,
   parseWorkoutDescription,
 } from "@/lib/training-utils";
@@ -29,9 +28,8 @@ export function NextActivityCard({ event }: { event: Event | null }) {
     );
   }
 
-  const phase = getPhase(event);
-  const phaseColor = getPhaseColorClass(phase);
   const activityLabel = getActivityLabel(event);
+  const sportColor = getSportColorClass(event.type);
   const sections = parseWorkoutDescription(event.description);
 
   return (
@@ -72,9 +70,9 @@ export function NextActivityCard({ event }: { event: Event | null }) {
             </div>
           ) : null}
           <span
-            className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold ${phaseColor} bg-secondary`}
+            className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold ${sportColor} bg-secondary`}
           >
-            {phase}
+            {activityLabel}
           </span>
         </div>
 
