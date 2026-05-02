@@ -13,6 +13,13 @@ export function todayISO(): string {
   return new Date().toISOString().slice(0, 10);
 }
 
+/** Return an ISO date string offset by `days` from the given date (or today) */
+export function addDays(days: number, from?: string): string {
+  const d = from ? parseLocalDate(from) : new Date();
+  d.setDate(d.getDate() + days);
+  return d.toISOString().slice(0, 10);
+}
+
 /** Get the Monday of the week containing the given date */
 export function getWeekStart(dateStr: string): string {
   const d = parseLocalDate(dateStr);
