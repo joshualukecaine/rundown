@@ -24,6 +24,8 @@ export default defineConfig({
         'src/app/api/events/bulk/route.ts',
         'src/app/api/athlete/route.ts',
         'src/hooks/use-estimated-distance.ts',
+        'src/lib/wellness-utils.ts',
+        'src/app/api/wellness/route.ts',
       ],
       exclude: [],
       thresholds: { lines: 80, functions: 80, branches: 80, statements: 80 },

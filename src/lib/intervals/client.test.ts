@@ -110,6 +110,30 @@ describe("IntervalsClient.deleteEvent", () => {
   });
 });
 
+describe("IntervalsClient.getWellness", () => {
+  it("should call the correct URL with oldest and newest params", async () => {
+    const fetchMock = mockFetch(200, []);
+    vi.stubGlobal("fetch", fetchMock);
+
+    const client = new IntervalsClient("key123", "athlete456");
+    await client.getWellness("2026-04-01", "2026-05-02");
+
+    const [url] = fetchMock.mock.calls[0] as [string];
+    expect(url).toContain("/athlete/athlete456/wellness");
+    expect(url).toContain("oldest=2026-04-01");
+    expect(url).toContain("newest=2026-05-02");
+  });
+
+  it("should return the parsed JSON response", async () => {
+    const fakeWellness = [{ id: "2026-05-01", hrv: 42 }];
+    vi.stubGlobal("fetch", mockFetch(200, fakeWellness));
+
+    const client = new IntervalsClient("key123", "athlete456");
+    const result = await client.getWellness("2026-04-01", "2026-05-02");
+    expect(result).toEqual(fakeWellness);
+  });
+});
+
 describe("IntervalsClient.fromBearerToken", () => {
   it("should send Bearer auth header instead of Basic", async () => {
     const fetchMock = mockFetch(200, []);
