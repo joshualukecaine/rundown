@@ -1,0 +1,338 @@
+[
+  {
+    "start_date_local": "2026-04-29",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 20m easy",
+    "description": "First bike back. Gentle spin, no pressure.\nEasy Spin\n- 20m Z1-Z2 HR",
+    "distance": 8000,
+    "moving_time": 1200,
+    "target": "HR",
+    "tags": [
+      "Restart Wk1"
+    ],
+    "external_id": "bike-2026-restart-wk1-wed"
+  },
+  {
+    "start_date_local": "2026-05-02",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 20m easy",
+    "description": "Easy spin. Legs fresh for Sunday long run.\nEasy Spin\n- 20m Z1-Z2 HR",
+    "distance": 8000,
+    "moving_time": 1200,
+    "target": "HR",
+    "tags": [
+      "Restart Wk1"
+    ],
+    "external_id": "bike-2026-restart-wk1-sat"
+  },
+  {
+    "start_date_local": "2026-05-06",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 20m easy",
+    "description": "Easy aerobic spin. Conversational.\nEasy Spin\n- 20m Z1-Z2 HR",
+    "distance": 8000,
+    "moving_time": 1200,
+    "target": "HR",
+    "tags": [
+      "Restart Wk2"
+    ],
+    "external_id": "bike-2026-restart-wk2-wed"
+  },
+  {
+    "start_date_local": "2026-05-09",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 20m easy",
+    "description": "Short spin. Save legs for Sunday.\nEasy Spin\n- 20m Z1-Z2 HR",
+    "distance": 8000,
+    "moving_time": 1200,
+    "target": "HR",
+    "tags": [
+      "Restart Wk2"
+    ],
+    "external_id": "bike-2026-restart-wk2-sat"
+  },
+  {
+    "start_date_local": "2026-05-13",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 25m easy",
+    "description": "Building slightly. Stay Z1-Z2.\nEasy Spin\n- 25m Z2 HR",
+    "distance": 10000,
+    "moving_time": 1500,
+    "target": "HR",
+    "tags": [
+      "Restart Wk3"
+    ],
+    "external_id": "bike-2026-restart-wk3-wed"
+  },
+  {
+    "start_date_local": "2026-05-16",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 20m easy",
+    "description": "Easy spin before Sunday long run.\nEasy Spin\n- 20m Z1-Z2 HR",
+    "distance": 8000,
+    "moving_time": 1200,
+    "target": "HR",
+    "tags": [
+      "Restart Wk3"
+    ],
+    "external_id": "bike-2026-restart-wk3-sat"
+  },
+  {
+    "start_date_local": "2026-05-20",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 25m easy",
+    "description": "Steady easy spin.\nEasy Spin\n- 25m Z2 HR",
+    "distance": 10000,
+    "moving_time": 1500,
+    "target": "HR",
+    "tags": [
+      "Restart Wk4"
+    ],
+    "external_id": "bike-2026-restart-wk4-wed"
+  },
+  {
+    "start_date_local": "2026-05-23",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 25m easy",
+    "description": "Easy spin. Keep legs available for Sunday.\nEasy Spin\n- 25m Z1-Z2 HR",
+    "distance": 10000,
+    "moving_time": 1500,
+    "target": "HR",
+    "tags": [
+      "Restart Wk4"
+    ],
+    "external_id": "bike-2026-restart-wk4-sat"
+  },
+  {
+    "start_date_local": "2026-05-27",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 20m easy",
+    "description": "Recovery week. Z1 only.\nEasy Spin\n- 20m Z1 HR",
+    "distance": 8000,
+    "moving_time": 1200,
+    "target": "HR",
+    "tags": [
+      "Recovery"
+    ],
+    "external_id": "bike-2026-rec1-wed"
+  },
+  {
+    "start_date_local": "2026-05-30",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 20m easy",
+    "description": "Recovery. Short and easy.\nEasy Spin\n- 20m Z1 HR",
+    "distance": 8000,
+    "moving_time": 1200,
+    "target": "HR",
+    "tags": [
+      "Recovery"
+    ],
+    "external_id": "bike-2026-rec1-sat"
+  },
+  {
+    "start_date_local": "2026-06-03",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 25m easy",
+    "description": "Base phase starts. Steady Z2 spin.\nEasy Spin\n- 25m Z2 HR",
+    "distance": 10000,
+    "moving_time": 1500,
+    "target": "HR",
+    "tags": [
+      "Base Wk1"
+    ],
+    "external_id": "bike-2026-base-wk1-wed"
+  },
+  {
+    "start_date_local": "2026-06-06",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 25m easy",
+    "description": "Easy spin before Sunday long run.\nEasy Spin\n- 25m Z1-Z2 HR",
+    "distance": 10000,
+    "moving_time": 1500,
+    "target": "HR",
+    "tags": [
+      "Base Wk1"
+    ],
+    "external_id": "bike-2026-base-wk1-sat"
+  },
+  {
+    "start_date_local": "2026-06-10",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 30m easy",
+    "description": "Building aerobic volume. Z2 throughout.\nEasy Spin\n- 30m Z2 HR",
+    "distance": 12000,
+    "moving_time": 1800,
+    "target": "HR",
+    "tags": [
+      "Base Wk2"
+    ],
+    "external_id": "bike-2026-base-wk2-wed"
+  },
+  {
+    "start_date_local": "2026-06-13",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 25m easy",
+    "description": "Keep it easy. Long run tomorrow.\nEasy Spin\n- 25m Z1-Z2 HR",
+    "distance": 10000,
+    "moving_time": 1500,
+    "target": "HR",
+    "tags": [
+      "Base Wk2"
+    ],
+    "external_id": "bike-2026-base-wk2-sat"
+  },
+  {
+    "start_date_local": "2026-06-17",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 30m easy",
+    "description": "Steady Z2. Should feel comfortable.\nEasy Spin\n- 30m Z2 HR",
+    "distance": 12000,
+    "moving_time": 1800,
+    "target": "HR",
+    "tags": [
+      "Base Wk3"
+    ],
+    "external_id": "bike-2026-base-wk3-wed"
+  },
+  {
+    "start_date_local": "2026-06-20",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 25m easy",
+    "description": "Easy spin. Save legs for Sunday.\nEasy Spin\n- 25m Z1-Z2 HR",
+    "distance": 10000,
+    "moving_time": 1500,
+    "target": "HR",
+    "tags": [
+      "Base Wk3"
+    ],
+    "external_id": "bike-2026-base-wk3-sat"
+  },
+  {
+    "start_date_local": "2026-06-24",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 35m easy",
+    "description": "Longest bike session so far. Settle into Z2.\nEasy Spin\n- 35m Z2 HR",
+    "distance": 14000,
+    "moving_time": 2100,
+    "target": "HR",
+    "tags": [
+      "Base Wk4"
+    ],
+    "external_id": "bike-2026-base-wk4-wed"
+  },
+  {
+    "start_date_local": "2026-06-27",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 30m easy",
+    "description": "Moderate spin. Long run Sunday.\nEasy Spin\n- 30m Z1-Z2 HR",
+    "distance": 12000,
+    "moving_time": 1800,
+    "target": "HR",
+    "tags": [
+      "Base Wk4"
+    ],
+    "external_id": "bike-2026-base-wk4-sat"
+  },
+  {
+    "start_date_local": "2026-07-01",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 20m easy",
+    "description": "Recovery week. Z1 only. Let body absorb base block.\nEasy Spin\n- 20m Z1 HR",
+    "distance": 8000,
+    "moving_time": 1200,
+    "target": "HR",
+    "tags": [
+      "Recovery"
+    ],
+    "external_id": "bike-2026-rec2-wed"
+  },
+  {
+    "start_date_local": "2026-07-04",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 20m easy",
+    "description": "Recovery. Gentle spin.\nEasy Spin\n- 20m Z1 HR",
+    "distance": 8000,
+    "moving_time": 1200,
+    "target": "HR",
+    "tags": [
+      "Recovery"
+    ],
+    "external_id": "bike-2026-rec2-sat"
+  },
+  {
+    "start_date_local": "2026-07-08",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 35m easy",
+    "description": "Build phase. Solid Z2 session.\nEasy Spin\n- 35m Z2 HR",
+    "distance": 14000,
+    "moving_time": 2100,
+    "target": "HR",
+    "tags": [
+      "Build Wk1"
+    ],
+    "external_id": "bike-2026-build-wk1-wed"
+  },
+  {
+    "start_date_local": "2026-07-11",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 30m easy",
+    "description": "Easy spin before long run.\nEasy Spin\n- 30m Z1-Z2 HR",
+    "distance": 12000,
+    "moving_time": 1800,
+    "target": "HR",
+    "tags": [
+      "Build Wk1"
+    ],
+    "external_id": "bike-2026-build-wk1-sat"
+  },
+  {
+    "start_date_local": "2026-07-15",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 35m easy",
+    "description": "Final build week. Controlled Z2.\nEasy Spin\n- 35m Z2 HR",
+    "distance": 14000,
+    "moving_time": 2100,
+    "target": "HR",
+    "tags": [
+      "Build Wk2"
+    ],
+    "external_id": "bike-2026-build-wk2-wed"
+  },
+  {
+    "start_date_local": "2026-07-18",
+    "category": "WORKOUT",
+    "type": "VirtualRide",
+    "name": "Bike: 25m easy",
+    "description": "Back off before Sunday long run.\nEasy Spin\n- 25m Z1-Z2 HR",
+    "distance": 10000,
+    "moving_time": 1500,
+    "target": "HR",
+    "tags": [
+      "Build Wk2"
+    ],
+    "external_id": "bike-2026-build-wk2-sat"
+  }
+]
