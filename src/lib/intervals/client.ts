@@ -4,7 +4,7 @@ import {
   IntervalsNotFoundError,
   IntervalsRateLimitError,
 } from "./errors";
-import type { Activity, Athlete, CreateEventInput, Event, IntervalsDTO } from "./types";
+import type { Activity, Athlete, CreateEventInput, Event, IntervalsDTO, Wellness } from "./types";
 
 const BASE_URL = "https://intervals.icu/api/v1";
 const DEFAULT_TIMEOUT = 30_000;
@@ -119,6 +119,16 @@ export class IntervalsClient {
     return this.request<IntervalsDTO>(
       "GET",
       `/activity/${activityId}/intervals`,
+    );
+  }
+
+  // --- Wellness (Garmin sync) ---
+
+  async getWellness(oldest: string, newest: string): Promise<Wellness[]> {
+    const params = new URLSearchParams({ oldest, newest });
+    return this.request<Wellness[]>(
+      "GET",
+      `/athlete/${this.athleteId}/wellness?${params}`,
     );
   }
 

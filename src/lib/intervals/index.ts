@@ -15,4 +15,5 @@ export type {
   IntervalsDTO,
   SportType,
   TargetType,
+  Wellness,
 } from "./types";

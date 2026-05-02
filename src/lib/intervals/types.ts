@@ -87,6 +87,29 @@ export interface IntervalsDTO {
   icu_intervals: Interval[];
 }
 
+export interface Wellness {
+  id: string;                    // date string YYYY-MM-DD
+  restingHR: number | null;
+  hrv: number | null;
+  hrvSDNN: number | null;
+  sleepSecs: number | null;
+  sleepScore: number | null;
+  sleepQuality: number | null;
+  avgSleepingHR: number | null;
+  steps: number | null;
+  weight: number | null;
+  spO2: number | null;
+  ctl: number | null;
+  atl: number | null;
+  stress: number | null;
+  mood: number | null;
+  fatigue: number | null;
+  soreness: number | null;
+  readiness: number | null;
+  vo2max: number | null;
+  updated: string | null;
+}
+
 export interface Activity {
   id: number;
   start_date_local: string;

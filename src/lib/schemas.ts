@@ -32,4 +32,9 @@ export const CreateEventSchema = z.object({
 
 export const UpdateEventSchema = CreateEventSchema.partial();
 
+export const WellnessQuerySchema = z.object({
+  oldest: z.string().regex(ISO_DATE, "oldest must be YYYY-MM-DD").optional(),
+  newest: z.string().regex(ISO_DATE, "newest must be YYYY-MM-DD").optional(),
+});
+
 export const BulkCreateSchema = z.array(CreateEventSchema).min(1, "at least one event required");
