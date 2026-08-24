@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover">
+    <link rel="icon" href="/assets/favicon-DbuOEHWz.ico">
+    <link rel="icon" href="/assets/icon-sfWokx_g.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon-B6P4MZSm.png">
+    <link rel="shortcut icon" sizes="192x192" href="/logo-192.png">
+    <link rel="shortcut icon" sizes="512x512" href="/logo-512.png">
+    <title>Intervals.icu</title>
+    <meta name="apple-mobile-web-app-title" content="Intervals.icu"/>
+    <meta name="description" content="Intervals.icu integrates with Strava, Zwift, Garmin Connect, Suunto, Wahoo and Dropbox, analyzes your rides, runs, swims and other activities and helps plan your training"/>
+    <!-- script src="https://analytics.ahrefs.com/analytics.js" data-key="0ocSvGlPQXezizpNWhrmMw" async></script-->
+    <script defer src="https://umami.intervals.icu/script.js" data-website-id="a3b55960-7305-4e4b-9646-5ee562dcbf9a" data-auto-track="false"></script>
+    <script type="module" crossorigin src="/assets/index-DiCQjJ1h.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CyJtHjXl.css">
+  <link rel="manifest" href="/manifest.webmanifest"></head>
+  <body>
+    <noscript>
+        <strong>We're sorry but this app doesn't work properly without JavaScript enabled.
+            Please enable it to continue.</strong>
+      <h2>Intervals.icu</h2>
+
+      <p>
+        Everyone knows that the best way to improve as a cyclist is to do power based interval training. However
+        its not always easy to motivate yourself to ride halfway up and down the same hill 8 times in a row.
+        <b>Intervals.icu automatically detects intervals</b> so you can ride your favourite route,
+        punish the rollers and still get good stats to track your progress. Forgot to hit the lap button? No problem!
+      </p>
+
+      <h3>Features</h3>
+      <ul>
+        <li>Automatic interval detection in rides with real power data</li>
+        <li>Comprehensive stats for each interval (power, heartrate, w/kg, torque, cadence, intensity, power zone etc.)</li>
+        <li>Automatic grouping of similar intervals with average stats for the group</li>
+        <li>Ride timelime chart showing power, cadence, heartrate, torque, training load etc. that highlights intervals with zoom</li>
+        <li>FTP estimation from a single 60s+ maximal effort (no tests!), with training load based decay</li>
+        <li>Ride power page with time in zones, power histogram, power curve (with season curve) and best power/duration efforts</li>
+        <li>Athlete power page with power curve (for last 42 days, season etc.), FTP estimation, best power/duration efforts, power models</li>
+        <li>Automatically detects and fixes power spikes</li>
+        <li>Manual editing of ride data is also supported</li>
+        <li>Comparison chart comparing intervals to similar intervals in previous rides</li>
+        <li>Calendar style training log with interval summaries and weekly stats (training load, time in power zones etc.)</li>
+        <li>Training load automatically estimated for HR only rides from previous rides with HR and power</li>
+        <li>Performance management / fitness chart tracking fitness, fatigue and form over time</li>
+        <li>Uses the standard Coggan metrics</li>
+        <li>Email notification when you achieve new best power/duration efforts and when your FTP increases</li>
+        <li>Download ride data in CSV format</li>
+      </ul>
+
+      <p>Heartrate based interval detection is under development.</p>
+    </noscript>
+    <div id="app"></div>
+    <script>
+      var match = /\b(MSIE |Trident.*?rv:|Edge\/)(\d+)/.exec(navigator.userAgent);
+      if (match && parseInt(match[2]) <= 11) {
+        var appNode = document.getElementById("app");
+        appNode.attributes.removeNamedItem("id");
+        appNode.innerHTML = "<h3>Unfortunately Intervals.icu only works on modern browsers<br>Please try " +
+            "<a href='https://www.google.com/chrome/'>Google Chrome</a></h3>";
+        window._intervalsOldBrowser = true;
+      }
+    </script>
+  </body>
+</html>

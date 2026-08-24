@@ -1,0 +1,472 @@
+/* ==UserStyle==
+@name         Intervals.icu Dark Mode
+@namespace    github.com/jlcain3
+@version      1.2.0
+@description  Dark mode for intervals.icu
+@author       jlcain3
+@match        https://intervals.icu/*
+==/UserStyle== */
+
+@-moz-document domain("intervals.icu") {
+
+  /* ── Core: force dark theme variables onto :root and light theme ── */
+
+  :root,
+  .v-theme--light {
+    color-scheme: dark !important;
+
+    /* Backgrounds & surfaces */
+    --v-theme-background: 18, 18, 18 !important;
+    --v-theme-surface: 33, 33, 33 !important;
+    --v-theme-surface-bright: 55, 55, 55 !important;
+    --v-theme-surface-light: 44, 44, 44 !important;
+    --v-theme-surface-variant: 160, 160, 160 !important;
+
+    /* Primary - slightly brighter blue for dark bg */
+    --v-theme-primary: 66, 165, 245 !important;
+    --v-theme-primary-darken-1: 39, 124, 193 !important;
+
+    /* Secondary */
+    --v-theme-secondary: 180, 180, 180 !important;
+    --v-theme-secondary-darken-1: 72, 169, 166 !important;
+
+    /* Status colors - slightly softened for dark */
+    --v-theme-error: 207, 102, 121 !important;
+    --v-theme-info: 66, 165, 245 !important;
+    --v-theme-success: 102, 187, 106 !important;
+    --v-theme-warning: 255, 167, 38 !important;
+
+    /* Text on backgrounds */
+    --v-theme-on-background: 230, 230, 230 !important;
+    --v-theme-on-surface: 230, 230, 230 !important;
+    --v-theme-on-surface-bright: 230, 230, 230 !important;
+    --v-theme-on-surface-light: 230, 230, 230 !important;
+    --v-theme-on-surface-variant: 18, 18, 18 !important;
+    --v-theme-on-primary: 255, 255, 255 !important;
+    --v-theme-on-primary-darken-1: 255, 255, 255 !important;
+    --v-theme-on-secondary: 255, 255, 255 !important;
+    --v-theme-on-secondary-darken-1: 255, 255, 255 !important;
+    --v-theme-on-error: 255, 255, 255 !important;
+    --v-theme-on-info: 255, 255, 255 !important;
+    --v-theme-on-success: 255, 255, 255 !important;
+    --v-theme-on-warning: 255, 255, 255 !important;
+
+    /* Borders & shadows for dark */
+    --v-border-color: 255, 255, 255 !important;
+    --v-border-opacity: 0.12 !important;
+    --v-shadow-color: 0, 0, 0 !important;
+
+    /* Emphasis & opacity */
+    --v-high-emphasis-opacity: 1 !important;
+    --v-medium-emphasis-opacity: 0.7 !important;
+    --v-disabled-opacity: 0.5 !important;
+    --v-idle-opacity: 0.1 !important;
+
+    /* Code & kbd */
+    --v-theme-kbd: 66, 66, 66 !important;
+    --v-theme-on-kbd: 255, 255, 255 !important;
+    --v-theme-code: 52, 52, 52 !important;
+    --v-theme-on-code: 204, 204, 204 !important;
+
+    /* Elevation overlay */
+    --v-elevation-overlay-color: white !important;
+  }
+
+  /* ── Body & html base ── */
+
+  html, body {
+    background-color: #121212 !important;
+    color: #e6e6e6 !important;
+  }
+
+  /* ── App bar / navigation ── */
+
+  .v-app-bar,
+  .v-toolbar {
+    background-color: #1e1e1e !important;
+    color: #e6e6e6 !important;
+  }
+
+  .v-navigation-drawer {
+    background-color: #1a1a1a !important;
+    color: #e6e6e6 !important;
+  }
+
+  /* ── Cards, dialogs, menus, sheets ── */
+
+  .v-card,
+  .v-dialog,
+  .v-menu__content,
+  .v-bottom-sheet,
+  .v-sheet {
+    background-color: rgb(33, 33, 33) !important;
+    color: #e6e6e6 !important;
+  }
+
+  /* ── Activity cards (hardcoded #fff in ActivityCalendar CSS) ── */
+
+  .activity {
+    background: #2a2a2a !important;
+  }
+
+  /* Activity card .outer - hardcoded color:#333 */
+  .outer {
+    color: #e0e0e0 !important;
+  }
+
+  .outer:hover {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+  }
+
+  /* Activity name text (hardcoded #666, #333) */
+  .name {
+    color: #bbb !important;
+  }
+
+  /* Days-until-race label (hardcoded #333) */
+  .days-until-race {
+    color: #ccc !important;
+  }
+
+  /* Stats text inside activity cards */
+  .stats {
+    color: #ddd !important;
+  }
+
+  /* ── Calendar day cells ── */
+
+  .day {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .cal.xs .week .day {
+    background-color: #1e1e1e !important;
+  }
+
+  /* Date headers (hardcoded #000000de and #bbb) */
+  .date {
+    color: #aaa !important;
+  }
+
+  .day-in-month {
+    color: #ccc !important;
+  }
+
+  .day-row {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .day.xs .activity {
+    border-left-color: #444 !important;
+  }
+
+  .day.xs .placeholder {
+    color: #ccc !important;
+  }
+
+  /* ── Week summary panel ── */
+
+  .week {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .week-notes {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .expansion-panel-title {
+    color: #e0e0e0 !important;
+  }
+
+  .expansion-panel-content {
+    color: #ccc !important;
+  }
+
+  /* ── Wellness info row (sleep, HR, weight stats above days) ── */
+
+  .wellness-info {
+    color: #ccc !important;
+  }
+
+  .wellness-info .hr {
+    color: #e57373 !important;
+  }
+
+  /* Label text (hardcoded #616161, #0000008a) */
+  .label {
+    color: #aaa !important;
+  }
+
+  /* Weather info */
+  .weather-info {
+    color: #bbb !important;
+  }
+
+  .temps {
+    color: #bbb !important;
+  }
+
+  /* ── Tables ── */
+
+  .v-table,
+  .v-data-table {
+    background-color: rgb(33, 33, 33) !important;
+    color: #e6e6e6 !important;
+  }
+
+  .v-table .v-table__wrapper > table > thead > tr > th {
+    background-color: #272727 !important;
+    color: #bbb !important;
+  }
+
+  .v-table .v-table__wrapper > table > tbody > tr:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+  }
+
+  /* ── Lists ── */
+
+  .v-list {
+    background-color: rgb(33, 33, 33) !important;
+    color: #e6e6e6 !important;
+  }
+
+  .v-list-item:hover {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+  }
+
+  /* ── Form inputs ── */
+
+  .v-text-field .v-field,
+  .v-select .v-field,
+  .v-textarea .v-field,
+  .v-autocomplete .v-field,
+  .v-combobox .v-field {
+    background-color: #2a2a2a !important;
+    color: #e6e6e6 !important;
+  }
+
+  .v-field__outline {
+    --v-field-border-opacity: 0.3 !important;
+  }
+
+  .v-label {
+    color: rgba(230, 230, 230, 0.7) !important;
+  }
+
+  /* ── Tabs ── */
+
+  .v-tabs {
+    background-color: transparent !important;
+  }
+
+  .v-tab {
+    color: rgba(230, 230, 230, 0.7) !important;
+  }
+
+  .v-tab--selected,
+  .v-tab.v-tab--selected {
+    color: rgb(66, 165, 245) !important;
+  }
+
+  /* ── Chips & badges ── */
+
+  .v-chip {
+    background-color: #383838 !important;
+    color: #e6e6e6 !important;
+  }
+
+  /* ── Tooltips ── */
+
+  .v-tooltip > .v-overlay__content {
+    background-color: #444 !important;
+    color: #e6e6e6 !important;
+  }
+
+  /* ── Zone detail text (hardcoded #333 in CombinedZoneDetail & EditEventDialog) ── */
+
+  .zone,
+  .time,
+  .percentage {
+    color: #ccc !important;
+  }
+
+  /* ── Event dialog backgrounds (hardcoded #fff) ── */
+
+  .v-form {
+    background-color: #212121 !important;
+  }
+
+  .top .main-icon {
+    color: #ccc !important;
+    background: #2a2a2a !important;
+    border-color: #555 !important;
+  }
+
+  /* ── Blurb borders (hardcoded #ddd) ── */
+
+  .blurb {
+    border-color: #444 !important;
+  }
+
+  /* ── Progress bars ── */
+
+  .v-progress-linear__background {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+  }
+
+  /* ── Scrollbars ── */
+
+  * {
+    scrollbar-color: #555 #1e1e1e;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #1e1e1e;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #777;
+  }
+
+  /* ── SVG charts - make axes/text readable ── */
+
+  svg text {
+    fill: #ccc !important;
+  }
+
+  svg .domain,
+  svg .tick line {
+    stroke: #555 !important;
+  }
+
+  /* ══ Broad catch-all overrides for hardcoded colors ══ */
+
+  /*
+   * Many elements use scoped data attributes with hardcoded colors.
+   * These catch-alls override inline styles and common dark-on-light patterns.
+   */
+
+  /* Hardcoded black/near-black text (inline styles) */
+  [style*="color: rgb(0, 0, 0)"],
+  [style*="color:#000"],
+  [style*="color: #000"],
+  [style*="color: black"] {
+    color: #e6e6e6 !important;
+  }
+
+  /* Hardcoded rgba black text variants */
+  [style*="color: rgba(0, 0, 0"] {
+    color: rgba(230, 230, 230, 0.87) !important;
+  }
+
+  /* Hardcoded white backgrounds (inline styles) */
+  [style*="background-color: white"],
+  [style*="background-color: rgb(255, 255, 255)"],
+  [style*="background-color:#fff"],
+  [style*="background-color: #fff"],
+  [style*="background-color:#ffffff"],
+  [style*="background-color: #ffffff"],
+  [style*="background: white"],
+  [style*="background: rgb(255, 255, 255)"],
+  [style*="background:#fff"],
+  [style*="background: #fff"] {
+    background-color: #212121 !important;
+    color: #e6e6e6 !important;
+  }
+
+  /* Hardcoded near-white/light-grey backgrounds (inline styles) */
+  [style*="background-color: rgb(244, 244, 250)"],
+  [style*="background-color: rgb(250, 250, 250)"],
+  [style*="background-color: rgb(245, 245, 245)"],
+  [style*="background-color: rgb(248, 248, 248)"],
+  [style*="background-color:#fafafa"],
+  [style*="background-color:#f5f5f5"],
+  [style*="background-color:#f8f8f8"],
+  [style*="background: rgb(244, 244, 250)"] {
+    background-color: #1e1e1e !important;
+  }
+
+  /* Light activity card background tints */
+  [style*="background: rgba(102, 102, 102"],
+  [style*="background: rgba(140, 86, 75"] {
+    background: rgba(255, 255, 255, 0.04) !important;
+  }
+
+  /* ── Dividers ── */
+
+  .v-divider {
+    border-color: rgba(255, 255, 255, 0.12) !important;
+  }
+
+  /* ── Expansion panels ── */
+
+  .v-expansion-panel {
+    background-color: #212121 !important;
+    color: #e6e6e6 !important;
+  }
+
+  /* ── Snackbar ── */
+
+  .v-snackbar__wrapper {
+    background-color: #333 !important;
+    color: #e6e6e6 !important;
+  }
+
+  /* ── Compliance badges ── */
+
+  .compliance.good {
+    color: #66bb6a !important;
+  }
+
+  .compliance.poor {
+    color: #ffa726 !important;
+  }
+
+  .compliance.bad {
+    color: #cf6679 !important;
+  }
+
+  /* ══ Nuclear option: override ALL hardcoded dark text in scoped components ══ */
+
+  /*
+   * Intervals.icu uses Vue scoped styles with [data-v-*] attributes
+   * and hardcoded colors like #333, #666, #616161, #000000de, #0000008a.
+   * These cannot be targeted by class alone since the scoped selectors
+   * have higher specificity. We use broad selectors with !important.
+   */
+
+  [data-v-dfb813c8],
+  [data-v-88d57dcb],
+  [data-v-3ea6e015],
+  [data-v-4121bbca],
+  [data-v-aced9cb4],
+  [data-v-2634b5d2],
+  [data-v-3158b781],
+  [data-v-4a650a5c],
+  [data-v-db73e376],
+  [data-v-7fc5bc10],
+  [data-v-6e12cd1d],
+  [data-v-0abc9831],
+  [data-v-6f1a9c3a],
+  [data-v-0c3d316e],
+  [data-v-dd722af5],
+  [data-v-f275abab],
+  [data-v-34ad82ef],
+  [data-v-63896dca],
+  [data-v-fd1be4dd],
+  [data-v-3a3f1e63],
+  [data-v-1eb075b1] {
+    color: inherit;
+  }
+
+}
