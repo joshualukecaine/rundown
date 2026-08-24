@@ -1,0 +1,302 @@
+[
+  {
+    "start_date_local": "2026-07-21",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Run: 35m",
+    "description": "Flat to rolling. Continuing build toward HM.\n\nEasy Run\n- 35m Z2 HR",
+    "target": "HR",
+    "tags": ["HM Build 3"],
+    "external_id": "hm-2026-build3-tue"
+  },
+  {
+    "start_date_local": "2026-07-23",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Run: 35m",
+    "description": "Rolling terrain. Steady effort.\n\nEasy Run\n- 35m Z2 HR",
+    "target": "HR",
+    "tags": ["HM Build 3"],
+    "external_id": "hm-2026-build3-thu"
+  },
+  {
+    "start_date_local": "2026-07-26",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Long Run: 75m",
+    "description": "Flat to rolling. ~11-12km. Fuel if over 60min.\n\nEasy Run\n- 75m Z2 HR",
+    "target": "HR",
+    "tags": ["HM Build 3"],
+    "external_id": "hm-2026-build3-sun"
+  },
+  {
+    "start_date_local": "2026-07-28",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Run: 35m",
+    "description": "Flat. Easy effort, legs fresh for Thursday.\n\nEasy Run\n- 35m Z2 HR",
+    "target": "HR",
+    "tags": ["HM Build 4"],
+    "external_id": "hm-2026-build4-tue"
+  },
+  {
+    "start_date_local": "2026-07-30",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Tempo Run: 40m",
+    "description": "First tempo session. Flat route.\n\nEasy Run\n- 10m Z2 HR\n\nTempo\n- 15m Z3 HR\n\nEasy Run\n- 15m Z2 HR",
+    "target": "HR",
+    "tags": ["HM Build 4"],
+    "external_id": "hm-2026-build4-thu"
+  },
+  {
+    "start_date_local": "2026-08-02",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Long Run: 85m",
+    "description": "Flat. ~13km. Fuel every 30-40min. Walk breaks OK if needed.\n\nEasy Run\n- 85m Z2 HR",
+    "target": "HR",
+    "tags": ["HM Build 4"],
+    "external_id": "hm-2026-build4-sun"
+  },
+  {
+    "start_date_local": "2026-08-04",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Recovery Run: 20m",
+    "description": "Recovery. Flat. Very easy.\n\nEasy Recovery\n- 20m Z1 HR",
+    "target": "HR",
+    "tags": ["Recovery"],
+    "external_id": "hm-2026-rec3-tue"
+  },
+  {
+    "start_date_local": "2026-08-06",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Recovery Run: 20m",
+    "description": "Recovery. Flat. Let body absorb the build.\n\nEasy Recovery\n- 20m Z1 HR",
+    "target": "HR",
+    "tags": ["Recovery"],
+    "external_id": "hm-2026-rec3-thu"
+  },
+  {
+    "start_date_local": "2026-08-09",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Long Run: 35m",
+    "description": "Recovery. Flat. Easy.\n\nEasy Recovery\n- 35m Z1 HR",
+    "target": "HR",
+    "tags": ["Recovery"],
+    "external_id": "hm-2026-rec3-sun"
+  },
+  {
+    "start_date_local": "2026-08-11",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Run: 35m",
+    "description": "Flat. Back into it after recovery.\n\nEasy Run\n- 35m Z2 HR",
+    "target": "HR",
+    "tags": ["HM Peak 1"],
+    "external_id": "hm-2026-peak1-tue"
+  },
+  {
+    "start_date_local": "2026-08-13",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Tempo Run: 40m",
+    "description": "Flat route. Building threshold tolerance.\n\nEasy Run\n- 10m Z2 HR\n\nTempo\n- 20m Z3 HR\n\nEasy Run\n- 10m Z2 HR",
+    "target": "HR",
+    "tags": ["HM Peak 1"],
+    "external_id": "hm-2026-peak1-thu"
+  },
+  {
+    "start_date_local": "2026-08-16",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Long Run: 95m",
+    "description": "Flat to rolling. ~14-15km. Fuel every 30min. Practice race day nutrition.\n\nEasy Run\n- 95m Z2 HR",
+    "target": "HR",
+    "tags": ["HM Peak 1"],
+    "external_id": "hm-2026-peak1-sun"
+  },
+  {
+    "start_date_local": "2026-08-18",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Run: 35m",
+    "description": "Flat. Easy. Legs may be heavy from Sunday.\n\nEasy Run\n- 35m Z2 HR",
+    "target": "HR",
+    "tags": ["HM Peak 2"],
+    "external_id": "hm-2026-peak2-tue"
+  },
+  {
+    "start_date_local": "2026-08-20",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Tempo Run: 45m",
+    "description": "Flat route. Longest tempo block.\n\nEasy Run\n- 10m Z2 HR\n\nTempo\n- 25m Z3 HR\n\nEasy Run\n- 10m Z2 HR",
+    "target": "HR",
+    "tags": ["HM Peak 2"],
+    "external_id": "hm-2026-peak2-thu"
+  },
+  {
+    "start_date_local": "2026-08-23",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Long Run: 105m",
+    "description": "Flat. ~16km. This is your key long run. Fuel every 30min. Walk 1min if needed.\n\nEasy Run\n- 105m Z2 HR",
+    "target": "HR",
+    "tags": ["HM Peak 2"],
+    "external_id": "hm-2026-peak2-sun"
+  },
+  {
+    "start_date_local": "2026-08-25",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Run: 35m",
+    "description": "Flat. Easy recovery from big weekend.\n\nEasy Run\n- 35m Z2 HR",
+    "target": "HR",
+    "tags": ["HM Peak 3"],
+    "external_id": "hm-2026-peak3-tue"
+  },
+  {
+    "start_date_local": "2026-08-27",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Tempo Run: 45m",
+    "description": "Flat. Last hard tempo before taper begins.\n\nEasy Run\n- 10m Z2 HR\n\nTempo\n- 25m Z3 HR\n\nEasy Run\n- 10m Z2 HR",
+    "target": "HR",
+    "tags": ["HM Peak 3"],
+    "external_id": "hm-2026-peak3-thu"
+  },
+  {
+    "start_date_local": "2026-08-30",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Long Run: 115m",
+    "description": "Flat. ~17-18km. PEAK LONG RUN. Fuel every 30min. Practice everything you'll do race day.\n\nEasy Run\n- 115m Z2 HR",
+    "target": "HR",
+    "tags": ["HM Peak 3"],
+    "external_id": "hm-2026-peak3-sun"
+  },
+  {
+    "start_date_local": "2026-09-01",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Recovery Run: 25m",
+    "description": "Recovery. Flat. Very easy. Absorb the peak block.\n\nEasy Recovery\n- 25m Z1 HR",
+    "target": "HR",
+    "tags": ["Recovery"],
+    "external_id": "hm-2026-rec4-tue"
+  },
+  {
+    "start_date_local": "2026-09-03",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Recovery Run: 25m",
+    "description": "Recovery. Flat. Legs should start feeling fresh.\n\nEasy Recovery\n- 25m Z1 HR",
+    "target": "HR",
+    "tags": ["Recovery"],
+    "external_id": "hm-2026-rec4-thu"
+  },
+  {
+    "start_date_local": "2026-09-06",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Long Run: 40m",
+    "description": "Recovery. Flat. Easy effort.\n\nEasy Recovery\n- 40m Z1 HR",
+    "target": "HR",
+    "tags": ["Recovery"],
+    "external_id": "hm-2026-rec4-sun"
+  },
+  {
+    "start_date_local": "2026-09-08",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Run: 30m",
+    "description": "Flat. Sharpening phase. Feeling good.\n\nEasy Run\n- 30m Z2 HR",
+    "target": "HR",
+    "tags": ["HM Sharpen"],
+    "external_id": "hm-2026-sharp1-tue"
+  },
+  {
+    "start_date_local": "2026-09-10",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Race Pace Run: 35m",
+    "description": "Flat. Practice race pace. Should feel controlled not hard.\n\nEasy Run\n- 10m Z2 HR\n\nRace Pace\n- 15m Z3 HR\n\nEasy Run\n- 10m Z2 HR",
+    "target": "HR",
+    "tags": ["HM Sharpen"],
+    "external_id": "hm-2026-sharp1-thu"
+  },
+  {
+    "start_date_local": "2026-09-13",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Long Run: 75m",
+    "description": "Flat. ~12km. Last longish run. Easy effort, don't push.\n\nEasy Run\n- 75m Z2 HR",
+    "target": "HR",
+    "tags": ["HM Sharpen"],
+    "external_id": "hm-2026-sharp1-sun"
+  },
+  {
+    "start_date_local": "2026-09-15",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Run: 25m",
+    "description": "Taper. Flat. Volume dropping, keep legs ticking.\n\nEasy Run\n- 25m Z2 HR",
+    "target": "HR",
+    "tags": ["HM Taper"],
+    "external_id": "hm-2026-taper-tue"
+  },
+  {
+    "start_date_local": "2026-09-17",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Race Pace Run: 30m",
+    "description": "Flat. Short race pace touch. Should feel easy and quick.\n\nEasy Run\n- 10m Z2 HR\n\nRace Pace\n- 10m Z3 HR\n\nEasy Run\n- 10m Z2 HR",
+    "target": "HR",
+    "tags": ["HM Taper"],
+    "external_id": "hm-2026-taper-thu"
+  },
+  {
+    "start_date_local": "2026-09-20",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Long Run: 50m",
+    "description": "Flat. ~8km. Last long effort. Easy pace, nothing heroic.\n\nEasy Run\n- 50m Z2 HR",
+    "target": "HR",
+    "tags": ["HM Taper"],
+    "external_id": "hm-2026-taper-sun"
+  },
+  {
+    "start_date_local": "2026-09-22",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Shakeout: 20m",
+    "description": "Flat. Very easy. Just keeping legs loose.\n\nEasy Run\n- 20m Z1-Z2 HR",
+    "target": "HR",
+    "tags": ["HM Race Week"],
+    "external_id": "hm-2026-raceweek-tue"
+  },
+  {
+    "start_date_local": "2026-09-24",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "Shakeout: 15m",
+    "description": "Flat. Last run before race. 10min easy + 4x20s strides.\n\nEasy Run\n- 10m Z1 HR\n\nStrides 4x\n- 20s Z4 HR\n- 40s Z1 HR\n\nEasy Run\n- 1m Z1 HR",
+    "target": "HR",
+    "tags": ["HM Race Week"],
+    "external_id": "hm-2026-raceweek-thu"
+  },
+  {
+    "start_date_local": "2026-09-27",
+    "category": "WORKOUT",
+    "type": "Run",
+    "name": "RACE: Half Marathon",
+    "description": "RACE DAY. 21.1km. Trust the training.\n\nTarget: even effort, don't go out too fast. First 5km should feel easy.\nFuel: gel at 8km and 15km.\nPace: aim for even splits, walk aid stations if needed.\n\nHalf Marathon\n- 21.1km Z2-Z3 HR",
+    "target": "HR",
+    "tags": ["HM Race Day"],
+    "external_id": "hm-2026-race"
+  }
+]

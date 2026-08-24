@@ -39,8 +39,8 @@
     "start_date_local": "2026-05-05",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Run: 19m",
-    "description": "FLAT. Extending run intervals. Should feel very easy.\nWarm Up\n- 2m Z1 HR intensity=warmup\n\nWalk/Run 5x\n- Run 2m Z2 HR\n- Walk 1m Z1 HR\n\nCool Down\n- 2m Z1 HR intensity=cooldown",
+    "name": "Run: 20m",
+    "description": "FLAT. Extending run intervals. Should feel very easy.\n\nWalk/Run 5x\n- Run 3m Z2 HR\n- Walk 1m Z1 HR",
     "target": "HR",
     "tags": [
       "Restart Wk2"
@@ -51,8 +51,8 @@
     "start_date_local": "2026-05-07",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Run: 19m",
-    "description": "FLAT. Run sections should be conversational.\nWarm Up\n- 2m Z1 HR intensity=warmup\n\nWalk/Run 5x\n- Run 2m Z2 HR\n- Walk 1m Z1 HR\n\nCool Down\n- 2m Z1 HR intensity=cooldown",
+    "name": "Run: 20m",
+    "description": "FLAT. Run sections should be conversational.\n\nWalk/Run 5x\n- Run 3m Z2 HR\n- Walk 1m Z1 HR",
     "target": "HR",
     "tags": [
       "Restart Wk2"
@@ -63,8 +63,8 @@
     "start_date_local": "2026-05-10",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Long Run: 22m",
-    "description": "FLAT. Building consistency not distance.\nWarm Up\n- 2m Z1 HR intensity=warmup\n\nWalk/Run 6x\n- Run 2m Z2 HR\n- Walk 1m Z1 HR\n\nCool Down\n- 2m Z1 HR intensity=cooldown",
+    "name": "Long Run: 24m",
+    "description": "FLAT. Building consistency not distance.\n\nWalk/Run 6x\n- Run 3m Z2 HR\n- Walk 1m Z1 HR",
     "target": "HR",
     "tags": [
       "Restart Wk2"
@@ -75,8 +75,8 @@
     "start_date_local": "2026-05-12",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Run: 20m",
-    "description": "FLAT. Longer run intervals now.\nWarm Up\n- 2m Z1 HR intensity=warmup\n\nWalk/Run 4x\n- Run 3m Z2 HR\n- Walk 1m Z1 HR\n\nCool Down\n- 2m Z1 HR intensity=cooldown",
+    "name": "Run: 24m",
+    "description": "FLAT. Longer run intervals now.\n\nWalk/Run 4x\n- Run 5m Z2 HR\n- Walk 1m Z1 HR",
     "target": "HR",
     "tags": [
       "Restart Wk3"
@@ -87,8 +87,8 @@
     "start_date_local": "2026-05-14",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Run: 24m",
-    "description": "FLAT. Building run duration.\nWarm Up\n- 2m Z1 HR intensity=warmup\n\nWalk/Run 5x\n- Run 3m Z2 HR\n- Walk 1m Z1 HR\n\nCool Down\n- 2m Z1 HR intensity=cooldown",
+    "name": "Run: 30m",
+    "description": "FLAT. Building run duration.\n\nWalk/Run 5x\n- Run 5m Z2 HR\n- Walk 1m Z1 HR",
     "target": "HR",
     "tags": [
       "Restart Wk3"
@@ -99,8 +99,8 @@
     "start_date_local": "2026-05-17",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Long Run: 29m",
-    "description": "FLAT. Gentle undulation OK. Walk any rise that spikes HR.\nWarm Up\n- 3m Z1 HR intensity=warmup\n\nWalk/Run 6x\n- Run 3m Z2 HR\n- Walk 1m Z1 HR\n\nCool Down\n- 2m Z1 HR intensity=cooldown",
+    "name": "Long Run: 36m",
+    "description": "FLAT. Gentle undulation OK. Walk any rise that spikes HR.\n\nWalk/Run 6x\n- Run 5m Z2 HR\n- Walk 1m Z1 HR",
     "target": "HR",
     "tags": [
       "Restart Wk3"
@@ -111,8 +111,8 @@
     "start_date_local": "2026-05-19",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Run: 20m",
-    "description": "Transitioning to continuous. Walk if HR drifts up.\nWarm Up\n- 3m Z1 HR intensity=warmup\n\nEasy Run\n- 15m Z2 HR\n\nCool Down\n- 2m Z1 HR intensity=cooldown",
+    "name": "Run: 18m",
+    "description": "Transitioning to continuous. Walk if HR drifts up.\n\nEasy Run\n- 18m Z2 HR",
     "target": "HR",
     "tags": [
       "Restart Wk4"
@@ -123,8 +123,8 @@
     "start_date_local": "2026-05-21",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Run: 23m",
-    "description": "FLAT. Aim for continuous but walk breaks fine.\nWarm Up\n- 3m Z1 HR intensity=warmup\n\nEasy Run\n- 18m Z2 HR\n\nCool Down\n- 2m Z1 HR intensity=cooldown",
+    "name": "Run: 20m",
+    "description": "FLAT. Aim for continuous but walk breaks fine.\n\nEasy Run\n- 20m Z2 HR",
     "target": "HR",
     "tags": [
       "Restart Wk4"
@@ -135,8 +135,8 @@
     "start_date_local": "2026-05-24",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Long Run: 35m",
-    "description": "FLAT. Building time on feet.\nWarm Up\n- 3m Z1 HR intensity=warmup\n\nRun/Walk 5x\n- Run 5m Z2 HR\n- Walk 1m Z1 HR\n\nCool Down\n- 2m Z1 HR intensity=cooldown",
+    "name": "Long Run: 30m",
+    "description": "FLAT. Building time on feet. Walk breaks fine if needed.\n\nEasy Run\n- 30m Z2 HR",
     "target": "HR",
     "tags": [
       "Restart Wk4"
@@ -148,7 +148,7 @@
     "category": "WORKOUT",
     "type": "Run",
     "name": "Recovery Run: 12m",
-    "description": "Recovery. Flat. Genuine rest week.\nEasy Recovery\n- 12m Z1 HR",
+    "description": "Recovery. Flat. Genuine rest week.\n\nEasy Recovery\n- 12m Z1 HR",
     "target": "HR",
     "tags": [
       "Recovery"
@@ -160,7 +160,7 @@
     "category": "WORKOUT",
     "type": "Run",
     "name": "Recovery Run: 12m",
-    "description": "Recovery. Flat. Short and easy.\nEasy Recovery\n- 12m Z1 HR",
+    "description": "Recovery. Flat. Short and easy.\n\nEasy Recovery\n- 12m Z1 HR",
     "target": "HR",
     "tags": [
       "Recovery"
@@ -172,7 +172,7 @@
     "category": "WORKOUT",
     "type": "Run",
     "name": "Long Run: 20m",
-    "description": "Recovery. Flat. Let body absorb the first 4 weeks.\nEasy Recovery\n- 20m Z1 HR",
+    "description": "Recovery. Flat. Let body absorb the first 4 weeks.\n\nEasy Recovery\n- 20m Z1 HR",
     "target": "HR",
     "tags": [
       "Recovery"
@@ -183,8 +183,8 @@
     "start_date_local": "2026-06-02",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Run: 23m",
-    "description": "Flat. Should feel comfortable at this distance now.\nWarm Up\n- 5m Z1 HR intensity=warmup\n\nEasy Run\n- 15m Z2 HR\n\nCool Down\n- 3m Z1 HR intensity=cooldown",
+    "name": "Run: 18m",
+    "description": "Flat. Should feel comfortable at this distance now.\n\nEasy Run\n- 18m Z2 HR",
     "target": "HR",
     "tags": [
       "Base Wk1"
@@ -195,8 +195,8 @@
     "start_date_local": "2026-06-04",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Run: 23m",
-    "description": "Flat. Steady effort nothing hard.\nWarm Up\n- 5m Z1 HR intensity=warmup\n\nEasy Run\n- 15m Z2 HR\n\nCool Down\n- 3m Z1 HR intensity=cooldown",
+    "name": "Run: 18m",
+    "description": "Flat. Steady effort nothing hard.\n\nEasy Run\n- 18m Z2 HR",
     "target": "HR",
     "tags": [
       "Base Wk1"
@@ -207,8 +207,8 @@
     "start_date_local": "2026-06-07",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Long Run: 38m",
-    "description": "Flat. First proper long run. Walk breaks fine.\nWarm Up\n- 5m Z1 HR intensity=warmup\n\nEasy Run\n- 30m Z2 HR\n\nCool Down\n- 3m Z1 HR intensity=cooldown",
+    "name": "Long Run: 33m",
+    "description": "Flat. First proper long run. Walk breaks fine.\n\nEasy Run\n- 33m Z2 HR",
     "target": "HR",
     "tags": [
       "Base Wk1"
@@ -219,8 +219,8 @@
     "start_date_local": "2026-06-09",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Run: 23m",
-    "description": "Flat. Legs should feel fresh for Sunday.\nWarm Up\n- 5m Z1 HR intensity=warmup\n\nEasy Run\n- 15m Z2 HR\n\nCool Down\n- 3m Z1 HR intensity=cooldown",
+    "name": "Run: 18m",
+    "description": "Flat. Legs should feel fresh for Sunday.\n\nEasy Run\n- 18m Z2 HR",
     "target": "HR",
     "tags": [
       "Base Wk2"
@@ -231,8 +231,8 @@
     "start_date_local": "2026-06-11",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Run: 26m",
-    "description": "Gentle rolling terrain OK. Walk ANY hill that pushes HR above Z2.\nWarm Up\n- 5m Z1 HR intensity=warmup\n\nEasy Run\n- 18m Z2 HR\n\nCool Down\n- 3m Z1 HR intensity=cooldown",
+    "name": "Run: 21m",
+    "description": "Gentle rolling terrain OK. Walk ANY hill that pushes HR above Z2.\n\nEasy Run\n- 21m Z2 HR",
     "target": "HR",
     "tags": [
       "Base Wk2"
@@ -243,8 +243,8 @@
     "start_date_local": "2026-06-14",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Long Run: 44m",
-    "description": "Flat. Conversational pace. Walk 1min every 2km if helpful.\nWarm Up\n- 5m Z1 HR intensity=warmup\n\nEasy Run\n- 36m Z2 HR\n\nCool Down\n- 3m Z1 HR intensity=cooldown",
+    "name": "Long Run: 39m",
+    "description": "Flat. Conversational pace. Walk 1min every 2km if helpful.\n\nEasy Run\n- 39m Z2 HR",
     "target": "HR",
     "tags": [
       "Base Wk2"
@@ -255,8 +255,8 @@
     "start_date_local": "2026-06-16",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Run: 26m",
-    "description": "Flat to gentle rolling.\nWarm Up\n- 5m Z1 HR intensity=warmup\n\nEasy Run\n- 18m Z2 HR\n\nCool Down\n- 3m Z1 HR intensity=cooldown",
+    "name": "Run: 21m",
+    "description": "Flat to gentle rolling.\n\nEasy Run\n- 21m Z2 HR",
     "target": "HR",
     "tags": [
       "Base Wk3"
@@ -267,8 +267,8 @@
     "start_date_local": "2026-06-18",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Run: 30m",
-    "description": "Rolling terrain OK. Walk any climb that spikes HR.\nWarm Up\n- 5m Z1 HR intensity=warmup\n\nEasy Run\n- 22m Z2 HR\n\nCool Down\n- 3m Z1 HR intensity=cooldown",
+    "name": "Run: 25m",
+    "description": "Rolling terrain OK. Walk any climb that spikes HR.\n\nEasy Run\n- 25m Z2 HR",
     "target": "HR",
     "tags": [
       "Base Wk3"
@@ -279,8 +279,8 @@
     "start_date_local": "2026-06-21",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Long Run: 51m",
-    "description": "Mostly flat, one rolling section OK. Walk any climb. Fuel if over 45min.\nWarm Up\n- 5m Z1 HR intensity=warmup\n\nEasy Run\n- 43m Z2 HR\n\nCool Down\n- 3m Z1 HR intensity=cooldown",
+    "name": "Long Run: 46m",
+    "description": "Mostly flat, one rolling section OK. Walk any climb. Fuel if over 45min.\n\nEasy Run\n- 46m Z2 HR",
     "target": "HR",
     "tags": [
       "Base Wk3"
@@ -291,8 +291,8 @@
     "start_date_local": "2026-06-23",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Run: 30m",
-    "description": "Rolling terrain. Building resilience.\nWarm Up\n- 5m Z1 HR intensity=warmup\n\nEasy Run\n- 22m Z2 HR\n\nCool Down\n- 3m Z1 HR intensity=cooldown",
+    "name": "Run: 25m",
+    "description": "Rolling terrain. Building resilience.\n\nEasy Run\n- 25m Z2 HR",
     "target": "HR",
     "tags": [
       "Base Wk4"
@@ -303,8 +303,8 @@
     "start_date_local": "2026-06-25",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Run: 30m",
-    "description": "Rolling. Walk hills. Steady rhythm.\nWarm Up\n- 5m Z1 HR intensity=warmup\n\nEasy Run\n- 22m Z2 HR\n\nCool Down\n- 3m Z1 HR intensity=cooldown",
+    "name": "Run: 25m",
+    "description": "Rolling. Walk hills. Steady rhythm.\n\nEasy Run\n- 25m Z2 HR",
     "target": "HR",
     "tags": [
       "Base Wk4"
@@ -315,8 +315,8 @@
     "start_date_local": "2026-06-28",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Long Run: 58m",
-    "description": "Flat to gentle rolling. Walk 1min every 2km if needed. Fueling practice.\nWarm Up\n- 5m Z1 HR intensity=warmup\n\nEasy Run\n- 50m Z2 HR\n\nCool Down\n- 3m Z1 HR intensity=cooldown",
+    "name": "Long Run: 53m",
+    "description": "Flat to gentle rolling. Walk 1min every 2km if needed. Fueling practice.\n\nEasy Run\n- 53m Z2 HR",
     "target": "HR",
     "tags": [
       "Base Wk4"
@@ -328,7 +328,7 @@
     "category": "WORKOUT",
     "type": "Run",
     "name": "Recovery Run: 20m",
-    "description": "Recovery. Flat. Very easy.\nEasy Recovery\n- 20m Z1 HR",
+    "description": "Recovery. Flat. Very easy.\n\nEasy Recovery\n- 20m Z1 HR",
     "target": "HR",
     "tags": [
       "Recovery"
@@ -340,7 +340,7 @@
     "category": "WORKOUT",
     "type": "Run",
     "name": "Recovery Run: 20m",
-    "description": "Recovery. Flat. Let body absorb the base block.\nEasy Recovery\n- 20m Z1 HR",
+    "description": "Recovery. Flat. Let body absorb the base block.\n\nEasy Recovery\n- 20m Z1 HR",
     "target": "HR",
     "tags": [
       "Recovery"
@@ -352,7 +352,7 @@
     "category": "WORKOUT",
     "type": "Run",
     "name": "Long Run: 30m",
-    "description": "Recovery. Flat. Rest before continuing build.\nEasy Recovery\n- 30m Z1 HR",
+    "description": "Recovery. Flat. Rest before continuing build.\n\nEasy Recovery\n- 30m Z1 HR",
     "target": "HR",
     "tags": [
       "Recovery"
@@ -363,8 +363,8 @@
     "start_date_local": "2026-07-07",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Run: 30m",
-    "description": "Flat. Picking back up after recovery.\nWarm Up\n- 5m Z1 HR intensity=warmup\n\nSteady Run\n- 22m Z2 HR\n\nCool Down\n- 3m Z1 HR intensity=cooldown",
+    "name": "Run: 25m",
+    "description": "Flat. Picking back up after recovery.\n\nSteady Run\n- 25m Z2 HR",
     "target": "HR",
     "tags": [
       "Build Wk1"
@@ -375,8 +375,8 @@
     "start_date_local": "2026-07-09",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Run: 33m",
-    "description": "Rolling to hilly. Walk all climbs.\nWarm Up\n- 5m Z1 HR intensity=warmup\n\nSteady Run\n- 25m Z2 HR\n\nCool Down\n- 3m Z1 HR intensity=cooldown",
+    "name": "Run: 28m",
+    "description": "Rolling to hilly. Walk all climbs.\n\nSteady Run\n- 28m Z2 HR",
     "target": "HR",
     "tags": [
       "Build Wk1"
@@ -387,8 +387,8 @@
     "start_date_local": "2026-07-12",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Long Run: 65m",
-    "description": "Flat to rolling. Longest run so far. Fuel every 30-40min if over an hour.\nWarm Up\n- 5m Z1 HR intensity=warmup\n\nSteady Run\n- 57m Z2 HR\n\nCool Down\n- 3m Z1 HR intensity=cooldown",
+    "name": "Long Run: 60m",
+    "description": "Flat to rolling. Longest run so far. Fuel every 30-40min if over an hour.\n\nSteady Run\n- 60m Z2 HR",
     "target": "HR",
     "tags": [
       "Build Wk1"
@@ -399,8 +399,8 @@
     "start_date_local": "2026-07-14",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Run: 33m",
-    "description": "Flat to rolling.\nWarm Up\n- 5m Z1 HR intensity=warmup\n\nSteady Run\n- 25m Z2 HR\n\nCool Down\n- 3m Z1 HR intensity=cooldown",
+    "name": "Run: 28m",
+    "description": "Flat to rolling.\n\nSteady Run\n- 28m Z2 HR",
     "target": "HR",
     "tags": [
       "Build Wk2"
@@ -411,8 +411,8 @@
     "start_date_local": "2026-07-16",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Run: 37m",
-    "description": "Hilly route. Power walk every climb. Easy down.\nWarm Up\n- 5m Z1 HR intensity=warmup\n\nSteady Run\n- 29m Z2 HR\n\nCool Down\n- 3m Z1 HR intensity=cooldown",
+    "name": "Run: 32m",
+    "description": "Hilly route. Power walk every climb. Easy down.\n\nSteady Run\n- 32m Z2 HR",
     "target": "HR",
     "tags": [
       "Build Wk2"
@@ -423,8 +423,8 @@
     "start_date_local": "2026-07-19",
     "category": "WORKOUT",
     "type": "Run",
-    "name": "Long Run: 72m",
-    "description": "Mostly flat, one hilly section OK. Walk any climb. Fueling practice.\nWarm Up\n- 5m Z1 HR intensity=warmup\n\nSteady Run\n- 64m Z2 HR\n\nCool Down\n- 3m Z1 HR intensity=cooldown",
+    "name": "Long Run: 67m",
+    "description": "Mostly flat, one hilly section OK. Walk any climb. Fueling practice.\n\nSteady Run\n- 67m Z2 HR",
     "target": "HR",
     "tags": [
       "Build Wk2"
