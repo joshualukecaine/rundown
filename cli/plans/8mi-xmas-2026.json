@@ -1,0 +1,55 @@
+[
+  { "start_date_local": "2026-10-03", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 15m", "description": "First run. FLAT.\n\nWalk/Run 5x\n- Run 1m Z2 HR\n- Walk 1m Z1 HR\n\nWalk Out\n- 5m Z1 HR", "target": "HR", "tags": ["C25K Wk1"], "external_id": "8mi-w1-sat" },
+
+  { "start_date_local": "2026-10-06", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 15m", "description": "FLAT.\n\nWalk/Run 5x\n- Run 1m Z2 HR\n- Walk 1m Z1 HR\n\nWalk Out\n- 5m Z1 HR", "target": "HR", "tags": ["C25K Wk1"], "external_id": "8mi-w1-tue" },
+  { "start_date_local": "2026-10-08", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 18m", "description": "FLAT.\n\nWalk/Run 6x\n- Run 1m Z2 HR\n- Walk 1m Z1 HR\n\nWalk Out\n- 6m Z1 HR", "target": "HR", "tags": ["C25K Wk1"], "external_id": "8mi-w1-thu" },
+  { "start_date_local": "2026-10-11", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 20m", "description": "FLAT.\n\nWalk/Run 7x\n- Run 1m Z2 HR\n- Walk 1m Z1 HR\n\nWalk Out\n- 6m Z1 HR", "target": "HR", "tags": ["C25K Wk1"], "external_id": "8mi-w1-sun" },
+
+  { "start_date_local": "2026-10-13", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 18m", "description": "FLAT. Longer runs.\n\nWalk/Run 6x\n- Run 2m Z2 HR\n- Walk 1m Z1 HR", "target": "HR", "tags": ["C25K Wk2"], "external_id": "8mi-w2-tue" },
+  { "start_date_local": "2026-10-15", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 18m", "description": "FLAT.\n\nWalk/Run 6x\n- Run 2m Z2 HR\n- Walk 1m Z1 HR", "target": "HR", "tags": ["C25K Wk2"], "external_id": "8mi-w2-thu" },
+  { "start_date_local": "2026-10-18", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 24m", "description": "FLAT.\n\nWalk/Run 8x\n- Run 2m Z2 HR\n- Walk 1m Z1 HR", "target": "HR", "tags": ["C25K Wk2"], "external_id": "8mi-w2-sun" },
+
+  { "start_date_local": "2026-10-20", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 20m", "description": "FLAT.\n\nWalk/Run 5x\n- Run 3m Z2 HR\n- Walk 1m Z1 HR", "target": "HR", "tags": ["C25K Wk3"], "external_id": "8mi-w3-tue" },
+  { "start_date_local": "2026-10-22", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 24m", "description": "FLAT.\n\nWalk/Run 6x\n- Run 3m Z2 HR\n- Walk 1m Z1 HR", "target": "HR", "tags": ["C25K Wk3"], "external_id": "8mi-w3-thu" },
+  { "start_date_local": "2026-10-25", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 28m", "description": "FLAT.\n\nWalk/Run 7x\n- Run 3m Z2 HR\n- Walk 1m Z1 HR", "target": "HR", "tags": ["C25K Wk3"], "external_id": "8mi-w3-sun" },
+
+  { "start_date_local": "2026-10-27", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 24m", "description": "FLAT.\n\nWalk/Run 4x\n- Run 5m Z2 HR\n- Walk 1m Z1 HR", "target": "HR", "tags": ["C25K Wk4"], "external_id": "8mi-w4-tue" },
+  { "start_date_local": "2026-10-29", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 30m", "description": "FLAT.\n\nWalk/Run 5x\n- Run 5m Z2 HR\n- Walk 1m Z1 HR", "target": "HR", "tags": ["C25K Wk4"], "external_id": "8mi-w4-thu" },
+  { "start_date_local": "2026-11-01", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 36m", "description": "FLAT.\n\nWalk/Run 6x\n- Run 5m Z2 HR\n- Walk 1m Z1 HR", "target": "HR", "tags": ["C25K Wk4"], "external_id": "8mi-w4-sun" },
+
+  { "start_date_local": "2026-11-03", "category": "WORKOUT", "type": "Run", "name": "Run: 18m", "description": "Continuous. Walk if HR drifts.\n\nEasy Run\n- 18m Z2 HR", "target": "HR", "tags": ["Base 1"], "external_id": "8mi-b1-tue" },
+  { "start_date_local": "2026-11-05", "category": "WORKOUT", "type": "Run", "name": "Run: 20m", "description": "Continuous. Flat.\n\nEasy Run\n- 20m Z2 HR", "target": "HR", "tags": ["Base 1"], "external_id": "8mi-b1-thu" },
+  { "start_date_local": "2026-11-07", "category": "WORKOUT", "type": "Run", "name": "Run: 15m", "description": "4th run introduced. Easy. Flat.\n\nEasy Run\n- 15m Z2 HR", "target": "HR", "tags": ["Base 1"], "external_id": "8mi-b1-sat" },
+  { "start_date_local": "2026-11-08", "category": "WORKOUT", "type": "Run", "name": "Long Run: 30m", "description": "Continuous. Flat to rolling. ~5km.\n\nEasy Run\n- 30m Z2 HR", "target": "HR", "tags": ["Base 1"], "external_id": "8mi-b1-sun" },
+
+  { "start_date_local": "2026-11-10", "category": "WORKOUT", "type": "Run", "name": "Run: 20m", "description": "Easy. Rolling OK.\n\nEasy Run\n- 20m Z2 HR", "target": "HR", "tags": ["Base 2"], "external_id": "8mi-b2-tue" },
+  { "start_date_local": "2026-11-12", "category": "WORKOUT", "type": "Run", "name": "Hill Intervals: 25m", "description": "First hill session. Find a moderate hill.\n\nWarm Up\n- 8m Z2 HR\n\nHill Repeats 4x\n- 1m uphill hard Z4 HR\n- 2m jog back down Z1 HR\n\nCool Down\n- 5m Z1 HR", "target": "HR", "tags": ["Base 2"], "external_id": "8mi-b2-thu" },
+  { "start_date_local": "2026-11-14", "category": "WORKOUT", "type": "Run", "name": "Run: 18m", "description": "Easy. Flat.\n\nEasy Run\n- 18m Z2 HR", "target": "HR", "tags": ["Base 2"], "external_id": "8mi-b2-sat" },
+  { "start_date_local": "2026-11-15", "category": "WORKOUT", "type": "Run", "name": "Long Run: 38m", "description": "Flat to rolling. ~6km.\n\nEasy Run\n- 38m Z2 HR", "target": "HR", "tags": ["Base 2"], "external_id": "8mi-b2-sun" },
+
+  { "start_date_local": "2026-11-17", "category": "WORKOUT", "type": "Run", "name": "Recovery Run: 15m", "description": "Recovery. Flat. Very easy.\n\nEasy Recovery\n- 15m Z1 HR", "target": "HR", "tags": ["Recovery"], "external_id": "8mi-rec-tue" },
+  { "start_date_local": "2026-11-19", "category": "WORKOUT", "type": "Run", "name": "Recovery Run: 15m", "description": "Recovery. Flat.\n\nEasy Recovery\n- 15m Z1 HR", "target": "HR", "tags": ["Recovery"], "external_id": "8mi-rec-thu" },
+  { "start_date_local": "2026-11-22", "category": "WORKOUT", "type": "Run", "name": "Long Run: 25m", "description": "Recovery. Flat. Easy.\n\nEasy Recovery\n- 25m Z1 HR", "target": "HR", "tags": ["Recovery"], "external_id": "8mi-rec-sun" },
+
+  { "start_date_local": "2026-11-24", "category": "WORKOUT", "type": "Run", "name": "Run: 25m", "description": "Back to work. Rolling.\n\nEasy Run\n- 25m Z2 HR", "target": "HR", "tags": ["Build 1"], "external_id": "8mi-bd1-tue" },
+  { "start_date_local": "2026-11-26", "category": "WORKOUT", "type": "Run", "name": "Hill Intervals: 28m", "description": "Hills. Moderate hill.\n\nWarm Up\n- 8m Z2 HR\n\nHill Repeats 5x\n- 1m uphill hard Z4 HR\n- 2m jog back down Z1 HR\n\nCool Down\n- 5m Z1 HR", "target": "HR", "tags": ["Build 1"], "external_id": "8mi-bd1-thu" },
+  { "start_date_local": "2026-11-28", "category": "WORKOUT", "type": "Run", "name": "Run: 20m", "description": "Easy. Flat.\n\nEasy Run\n- 20m Z2 HR", "target": "HR", "tags": ["Build 1"], "external_id": "8mi-bd1-sat" },
+  { "start_date_local": "2026-11-29", "category": "WORKOUT", "type": "Run", "name": "Long Run: 50m", "description": "Flat to rolling. ~8km. Walk any climb.\n\nEasy Run\n- 50m Z2 HR", "target": "HR", "tags": ["Build 1"], "external_id": "8mi-bd1-sun" },
+
+  { "start_date_local": "2026-12-01", "category": "WORKOUT", "type": "Run", "name": "Run: 28m", "description": "Rolling.\n\nEasy Run\n- 28m Z2 HR", "target": "HR", "tags": ["Build 2"], "external_id": "8mi-bd2-tue" },
+  { "start_date_local": "2026-12-03", "category": "WORKOUT", "type": "Run", "name": "Hill Intervals: 30m", "description": "Hills. Moderate hill.\n\nWarm Up\n- 8m Z2 HR\n\nHill Repeats 6x\n- 1m uphill hard Z4 HR\n- 2m jog back down Z1 HR\n\nCool Down\n- 4m Z1 HR", "target": "HR", "tags": ["Build 2"], "external_id": "8mi-bd2-thu" },
+  { "start_date_local": "2026-12-05", "category": "WORKOUT", "type": "Run", "name": "Run: 22m", "description": "Easy. Flat.\n\nEasy Run\n- 22m Z2 HR", "target": "HR", "tags": ["Build 2"], "external_id": "8mi-bd2-sat" },
+  { "start_date_local": "2026-12-06", "category": "WORKOUT", "type": "Run", "name": "Long Run: 60m", "description": "Flat to rolling. ~10km. Fuel every 30-40min.\n\nEasy Run\n- 60m Z2 HR", "target": "HR", "tags": ["Build 2"], "external_id": "8mi-bd2-sun" },
+
+  { "start_date_local": "2026-12-08", "category": "WORKOUT", "type": "Run", "name": "Run: 30m", "description": "Rolling.\n\nEasy Run\n- 30m Z2 HR", "target": "HR", "tags": ["Build 3"], "external_id": "8mi-bd3-tue" },
+  { "start_date_local": "2026-12-10", "category": "WORKOUT", "type": "Run", "name": "Hill Intervals: 32m", "description": "Hills. Moderate to steep.\n\nWarm Up\n- 8m Z2 HR\n\nHill Repeats 6x\n- 90s uphill hard Z4 HR\n- 2m jog back down Z1 HR\n\nCool Down\n- 3m Z1 HR", "target": "HR", "tags": ["Build 3"], "external_id": "8mi-bd3-thu" },
+  { "start_date_local": "2026-12-12", "category": "WORKOUT", "type": "Run", "name": "Run: 25m", "description": "Easy. Flat.\n\nEasy Run\n- 25m Z2 HR", "target": "HR", "tags": ["Build 3"], "external_id": "8mi-bd3-sat" },
+  { "start_date_local": "2026-12-13", "category": "WORKOUT", "type": "Run", "name": "Long Run: 75m", "description": "Peak long run. Flat to rolling. ~12km. Fuel every 30min.\n\nEasy Run\n- 75m Z2 HR", "target": "HR", "tags": ["Build 3"], "external_id": "8mi-bd3-sun" },
+
+  { "start_date_local": "2026-12-15", "category": "WORKOUT", "type": "Run", "name": "Run: 25m", "description": "Taper. Easy.\n\nEasy Run\n- 25m Z2 HR", "target": "HR", "tags": ["Taper"], "external_id": "8mi-tap-tue" },
+  { "start_date_local": "2026-12-17", "category": "WORKOUT", "type": "Run", "name": "Run: 20m", "description": "Taper. Easy.\n\nEasy Run\n- 20m Z2 HR", "target": "HR", "tags": ["Taper"], "external_id": "8mi-tap-thu" },
+  { "start_date_local": "2026-12-20", "category": "WORKOUT", "type": "Run", "name": "Long Run: 40m", "description": "Taper long run. Easy.\n\nEasy Run\n- 40m Z2 HR", "target": "HR", "tags": ["Taper"], "external_id": "8mi-tap-sun" },
+
+  { "start_date_local": "2026-12-22", "category": "WORKOUT", "type": "Run", "name": "Shakeout: 15m", "description": "Easy. Legs loose.\n\nEasy Run\n- 15m Z1-Z2 HR", "target": "HR", "tags": ["Goal Week"], "external_id": "8mi-gw-tue" },
+  { "start_date_local": "2026-12-24", "category": "WORKOUT", "type": "Run", "name": "8 Mile Run", "description": "Christmas Eve. 8 miles. Start easy, enjoy it.\n\nLong Run\n- 13km Z2 HR", "target": "HR", "tags": ["Goal Run"], "external_id": "8mi-goal" }
+]

@@ -1,0 +1,27 @@
+[
+  { "start_date_local": "2026-09-13", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 15m", "description": "First run back. FLAT.\n\nWalk/Run 5x\n- Run 1m Z2 HR\n- Walk 1m Z1 HR\n\nWalk Out\n- 5m Z1 HR", "target": "HR", "tags": ["C25K Wk1"], "external_id": "c25k-w1-sun" },
+
+  { "start_date_local": "2026-09-15", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 15m", "description": "FLAT. Same as Sunday.\n\nWalk/Run 5x\n- Run 1m Z2 HR\n- Walk 1m Z1 HR\n\nWalk Out\n- 5m Z1 HR", "target": "HR", "tags": ["C25K Wk1"], "external_id": "c25k-w1-tue" },
+  { "start_date_local": "2026-09-17", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 18m", "description": "FLAT. Bit more running.\n\nWalk/Run 6x\n- Run 1m Z2 HR\n- Walk 1m Z1 HR\n\nWalk Out\n- 6m Z1 HR", "target": "HR", "tags": ["C25K Wk1"], "external_id": "c25k-w1-thu" },
+  { "start_date_local": "2026-09-20", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 20m", "description": "FLAT. Extending time on feet.\n\nWalk/Run 7x\n- Run 1m Z2 HR\n- Walk 1m Z1 HR\n\nWalk Out\n- 6m Z1 HR", "target": "HR", "tags": ["C25K Wk1"], "external_id": "c25k-w1-sun2" },
+
+  { "start_date_local": "2026-09-22", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 18m", "description": "FLAT. Longer run intervals.\n\nWalk/Run 6x\n- Run 2m Z2 HR\n- Walk 1m Z1 HR", "target": "HR", "tags": ["C25K Wk2"], "external_id": "c25k-w2-tue" },
+  { "start_date_local": "2026-09-24", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 18m", "description": "FLAT. Same pattern.\n\nWalk/Run 6x\n- Run 2m Z2 HR\n- Walk 1m Z1 HR", "target": "HR", "tags": ["C25K Wk2"], "external_id": "c25k-w2-thu" },
+  { "start_date_local": "2026-09-27", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 24m", "description": "FLAT. Building time on feet.\n\nWalk/Run 8x\n- Run 2m Z2 HR\n- Walk 1m Z1 HR", "target": "HR", "tags": ["C25K Wk2"], "external_id": "c25k-w2-sun" },
+
+  { "start_date_local": "2026-09-29", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 20m", "description": "FLAT. Longer run blocks.\n\nWalk/Run 5x\n- Run 3m Z2 HR\n- Walk 1m Z1 HR", "target": "HR", "tags": ["C25K Wk3"], "external_id": "c25k-w3-tue" },
+  { "start_date_local": "2026-10-01", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 20m", "description": "FLAT. Same pattern.\n\nWalk/Run 5x\n- Run 3m Z2 HR\n- Walk 1m Z1 HR", "target": "HR", "tags": ["C25K Wk3"], "external_id": "c25k-w3-thu" },
+  { "start_date_local": "2026-10-04", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 28m", "description": "FLAT. Longer session.\n\nWalk/Run 7x\n- Run 3m Z2 HR\n- Walk 1m Z1 HR", "target": "HR", "tags": ["C25K Wk3"], "external_id": "c25k-w3-sun" },
+
+  { "start_date_local": "2026-10-06", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 24m", "description": "FLAT. Big run blocks now.\n\nWalk/Run 4x\n- Run 5m Z2 HR\n- Walk 1m Z1 HR", "target": "HR", "tags": ["C25K Wk4"], "external_id": "c25k-w4-tue" },
+  { "start_date_local": "2026-10-08", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 30m", "description": "FLAT.\n\nWalk/Run 5x\n- Run 5m Z2 HR\n- Walk 1m Z1 HR", "target": "HR", "tags": ["C25K Wk4"], "external_id": "c25k-w4-thu" },
+  { "start_date_local": "2026-10-11", "category": "WORKOUT", "type": "Run", "name": "Walk/Run: 36m", "description": "FLAT. Longest session.\n\nWalk/Run 6x\n- Run 5m Z2 HR\n- Walk 1m Z1 HR", "target": "HR", "tags": ["C25K Wk4"], "external_id": "c25k-w4-sun" },
+
+  { "start_date_local": "2026-10-13", "category": "WORKOUT", "type": "Run", "name": "Run: 15m", "description": "Transitioning to continuous. Walk if HR drifts.\n\nEasy Run\n- 15m Z2 HR", "target": "HR", "tags": ["C25K Wk5"], "external_id": "c25k-w5-tue" },
+  { "start_date_local": "2026-10-15", "category": "WORKOUT", "type": "Run", "name": "Run: 18m", "description": "Continuous. Walk if needed.\n\nEasy Run\n- 18m Z2 HR", "target": "HR", "tags": ["C25K Wk5"], "external_id": "c25k-w5-thu" },
+  { "start_date_local": "2026-10-18", "category": "WORKOUT", "type": "Run", "name": "Run: 22m", "description": "Continuous. Should feel manageable.\n\nEasy Run\n- 22m Z2 HR", "target": "HR", "tags": ["C25K Wk5"], "external_id": "c25k-w5-sun" },
+
+  { "start_date_local": "2026-10-20", "category": "WORKOUT", "type": "Run", "name": "Run: 18m", "description": "Continuous. Flat to rolling.\n\nEasy Run\n- 18m Z2 HR", "target": "HR", "tags": ["C25K Wk6"], "external_id": "c25k-w6-tue" },
+  { "start_date_local": "2026-10-22", "category": "WORKOUT", "type": "Run", "name": "Run: 22m", "description": "Continuous. Building.\n\nEasy Run\n- 22m Z2 HR", "target": "HR", "tags": ["C25K Wk6"], "external_id": "c25k-w6-thu" },
+  { "start_date_local": "2026-10-25", "category": "WORKOUT", "type": "Run", "name": "Run: 28m", "description": "Continuous. ~5km. You're there.\n\nEasy Run\n- 28m Z2 HR", "target": "HR", "tags": ["C25K Wk6"], "external_id": "c25k-w6-sun" }
+]

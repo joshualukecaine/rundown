@@ -1,0 +1,227 @@
+{
+    "program_name": "Shoulder Rehab (Surf/Paddling)",
+    "program_description": "3-phase shoulder rehab targeting infraspinatus, teres minor, and scapular stabilisers. Progress based on pain not calendar. Each phase ~2 weeks. Phase 1 daily, Phase 2-3 3x/week.",
+    "days": [
+        {
+            "day": 1,
+            "name": "Phase 1: Calm It Down",
+            "description": "Daily. Reduce paddling volume or rest if sore. Letting irritation settle.",
+            "duration_minutes": 15,
+            "exercises": [
+                {
+                    "name": "Lacrosse Ball Release (Infraspinatus)",
+                    "category": "Mobility",
+                    "sets": 1,
+                    "reps": "90 seconds",
+                    "rest_seconds": 0,
+                    "notes": "On the floor, gentle pressure on tender spots. Both sides.",
+                    "exercise_template_id": "e59fe89b-089d-4e01-b535-12713fe9d794"
+                },
+                {
+                    "name": "Cross-Body Shoulder Stretch",
+                    "category": "Stretching",
+                    "sets": 3,
+                    "reps": "30 seconds",
+                    "rest_seconds": 0,
+                    "notes": "Pull arm across chest, feel it in the back of the shoulder.",
+                    "exercise_template_id": "51ce6692-eeba-4d73-ac42-df9d23cb0528"
+                },
+                {
+                    "name": "Doorway Chest Stretch",
+                    "category": "Stretching",
+                    "sets": 3,
+                    "reps": "30 seconds",
+                    "rest_seconds": 0,
+                    "notes": "Elbow at 90 degrees, lean through a doorframe.",
+                    "exercise_template_id": "90c6ccdb-0bc5-48dc-9fc8-e4a8ec6b1e8b"
+                },
+                {
+                    "name": "Quadruped Thoracic Rotations",
+                    "category": "Mobility",
+                    "sets": 1,
+                    "reps": 10,
+                    "rest_seconds": 0,
+                    "notes": "Upper back mobility. Can also do thoracic extensions over foam roller.",
+                    "exercise_template_id": "c821aecc-44c3-491e-b425-766d40ce34b6"
+                },
+                {
+                    "name": "Band Pullaparts",
+                    "category": "Shoulders",
+                    "sets": 3,
+                    "reps": 15,
+                    "rest_seconds": 30,
+                    "notes": "Light band, squeeze shoulder blades together.",
+                    "exercise_template_id": "E8D86EE8"
+                },
+                {
+                    "name": "Side Lying External Rotation",
+                    "category": "Shoulders",
+                    "sets": 3,
+                    "reps": 15,
+                    "rest_seconds": 30,
+                    "notes": "Light dumbbell (1-2kg), elbow pinned to side.",
+                    "exercise_template_id": "9291b438-cc8a-4f52-9c1b-4755420520dc"
+                }
+            ]
+        },
+        {
+            "day": 2,
+            "name": "Phase 2: Rebuild",
+            "description": "3x/week. Keep daily stretches from Phase 1. Light paddling OK but stop if pain returns.",
+            "duration_minutes": 20,
+            "exercises": [
+                {
+                    "name": "Band External Rotation at 90 Abduction",
+                    "category": "Shoulders",
+                    "sets": 3,
+                    "reps": 12,
+                    "rest_seconds": 30,
+                    "notes": "Arm out to side, rotate forearm up.",
+                    "exercise_template_id": "6bc6f8bc-dc23-4336-b395-a33c8735b568"
+                },
+                {
+                    "name": "Face Pull",
+                    "category": "Shoulders",
+                    "sets": 3,
+                    "reps": 15,
+                    "rest_seconds": 30,
+                    "notes": "Cable or band, pull to forehead, squeeze end position.",
+                    "exercise_template_id": "BE640BA0"
+                },
+                {
+                    "name": "Prone Y Raises",
+                    "category": "Shoulders",
+                    "sets": 3,
+                    "reps": 12,
+                    "rest_seconds": 30,
+                    "notes": "Face down on bench, thumbs up, lift arms overhead.",
+                    "exercise_template_id": "1f36ede1-dbc9-468c-95c6-b957b04872c8"
+                },
+                {
+                    "name": "Prone T Raises",
+                    "category": "Shoulders",
+                    "sets": 3,
+                    "reps": 12,
+                    "rest_seconds": 30,
+                    "notes": "Same position, arms out to sides.",
+                    "exercise_template_id": "dbf3c9bf-b03c-4481-8cf4-835f8463ee1a"
+                },
+                {
+                    "name": "Scapular Push-Ups",
+                    "category": "Shoulders",
+                    "sets": 3,
+                    "reps": 12,
+                    "rest_seconds": 30,
+                    "notes": "Plank position, protract/retract shoulder blades only.",
+                    "exercise_template_id": "0cbe72b6-beb3-4ff0-b040-43829e20f003"
+                },
+                {
+                    "name": "Dead Hang",
+                    "category": "Shoulders",
+                    "sets": 3,
+                    "reps": "25 seconds",
+                    "rest_seconds": 30,
+                    "notes": "Passive hang from a bar, decompresses the shoulder.",
+                    "exercise_template_id": "B9380898"
+                }
+            ]
+        },
+        {
+            "day": 3,
+            "name": "Phase 3: Load It Up",
+            "description": "3x/week ongoing once pain-free. Drop to 2x/week long-term. Full paddling.",
+            "duration_minutes": 25,
+            "exercises": [
+                {
+                    "name": "Cable External Rotation at 90",
+                    "category": "Shoulders",
+                    "sets": 3,
+                    "reps": 10,
+                    "rest_seconds": 45,
+                    "notes": "Increase resistance gradually.",
+                    "exercise_template_id": "bc9743fc-85d3-4123-baa9-40cb7e7d28ec"
+                },
+                {
+                    "name": "Face Pull",
+                    "category": "Shoulders",
+                    "sets": 3,
+                    "reps": 12,
+                    "rest_seconds": 45,
+                    "notes": "Progress the load from Phase 2.",
+                    "exercise_template_id": "BE640BA0"
+                },
+                {
+                    "name": "Prone W Raises",
+                    "category": "Shoulders",
+                    "sets": 3,
+                    "reps": 12,
+                    "rest_seconds": 30,
+                    "notes": "Arms in a W shape, squeeze shoulder blades hard.",
+                    "exercise_template_id": "0ccafa84-bf23-4388-9d21-5aa555b0d59a"
+                },
+                {
+                    "name": "Dumbbell Row",
+                    "category": "Back",
+                    "sets": 3,
+                    "reps": 10,
+                    "rest_seconds": 60,
+                    "notes": "Single arm. Focus on scapular retraction at the top.",
+                    "exercise_template_id": "F1E57334"
+                },
+                {
+                    "name": "Kettlebell Turkish Get Up",
+                    "category": "Full Body",
+                    "sets": 3,
+                    "reps": 3,
+                    "rest_seconds": 60,
+                    "notes": "Light weight, each side. Full shoulder stability through range.",
+                    "exercise_template_id": "5F8903BF"
+                },
+                {
+                    "name": "Overhead Carry",
+                    "category": "Shoulders",
+                    "sets": 3,
+                    "reps": "30 seconds",
+                    "rest_seconds": 60,
+                    "notes": "Single arm, dumbbell or kettlebell. ~30 metres.",
+                    "exercise_template_id": "1773b8e8-8291-488e-bf71-f764d1c5eabb"
+                }
+            ]
+        },
+        {
+            "day": 4,
+            "name": "Pre-Surf Warmup",
+            "description": "Before every session, even after rehab is complete.",
+            "duration_minutes": 5,
+            "exercises": [
+                {
+                    "name": "Arm Circles",
+                    "category": "Warm-up",
+                    "sets": 1,
+                    "reps": 10,
+                    "rest_seconds": 0,
+                    "notes": "Each direction, both arms.",
+                    "exercise_template_id": "46074ea6-59c1-4e5f-a135-cc72baed0d8b"
+                },
+                {
+                    "name": "Band Pullaparts",
+                    "category": "Warm-up",
+                    "sets": 1,
+                    "reps": 15,
+                    "rest_seconds": 0,
+                    "notes": "Light band.",
+                    "exercise_template_id": "E8D86EE8"
+                },
+                {
+                    "name": "Band External Rotation at 90 Abduction",
+                    "category": "Warm-up",
+                    "sets": 1,
+                    "reps": 10,
+                    "rest_seconds": 0,
+                    "notes": "Each side.",
+                    "exercise_template_id": "6bc6f8bc-dc23-4336-b395-a33c8735b568"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+[
+  { "start_date_local": "2026-09-08", "category": "WORKOUT", "type": "Run", "name": "Run: 12m", "description": "First run back. FLAT. Easy.\n\nEasy Run\n- 12m Z2 HR", "target": "HR", "tags": ["Return 1"], "external_id": "pp-r1-tue" },
+  { "start_date_local": "2026-09-10", "category": "WORKOUT", "type": "Run", "name": "Run: 12m", "description": "FLAT. Keep it easy.\n\nEasy Run\n- 12m Z2 HR", "target": "HR", "tags": ["Return 1"], "external_id": "pp-r1-thu" },
+  { "start_date_local": "2026-09-13", "category": "WORKOUT", "type": "Run", "name": "Long Run: 18m", "description": "FLAT. Time on feet.\n\nEasy Run\n- 18m Z2 HR", "target": "HR", "tags": ["Return 1"], "external_id": "pp-r1-sun" },
+
+  { "start_date_local": "2026-09-15", "category": "WORKOUT", "type": "Run", "name": "Run: 15m", "description": "FLAT. Building back.\n\nEasy Run\n- 15m Z2 HR", "target": "HR", "tags": ["Return 2"], "external_id": "pp-r2-tue" },
+  { "start_date_local": "2026-09-17", "category": "WORKOUT", "type": "Run", "name": "Run: 15m", "description": "FLAT. Steady.\n\nEasy Run\n- 15m Z2 HR", "target": "HR", "tags": ["Return 2"], "external_id": "pp-r2-thu" },
+  { "start_date_local": "2026-09-20", "category": "WORKOUT", "type": "Run", "name": "Long Run: 22m", "description": "FLAT. Walk if needed.\n\nEasy Run\n- 22m Z2 HR", "target": "HR", "tags": ["Return 2"], "external_id": "pp-r2-sun" },
+
+  { "start_date_local": "2026-09-22", "category": "WORKOUT", "type": "Run", "name": "Run: 18m", "description": "Flat. Should feel comfortable.\n\nEasy Run\n- 18m Z2 HR", "target": "HR", "tags": ["Base 1"], "external_id": "pp-b1-tue" },
+  { "start_date_local": "2026-09-24", "category": "WORKOUT", "type": "Run", "name": "Run: 18m", "description": "Flat. Steady effort.\n\nEasy Run\n- 18m Z2 HR", "target": "HR", "tags": ["Base 1"], "external_id": "pp-b1-thu" },
+  { "start_date_local": "2026-09-27", "category": "WORKOUT", "type": "Run", "name": "Long Run: 25m", "description": "Flat to gentle rolling.\n\nEasy Run\n- 25m Z2 HR", "target": "HR", "tags": ["Base 1"], "external_id": "pp-b1-sun" },
+
+  { "start_date_local": "2026-09-29", "category": "WORKOUT", "type": "Run", "name": "Run: 18m", "description": "Flat to rolling.\n\nEasy Run\n- 18m Z2 HR", "target": "HR", "tags": ["Base 2"], "external_id": "pp-b2-tue" },
+  { "start_date_local": "2026-10-01", "category": "WORKOUT", "type": "Run", "name": "Run: 20m", "description": "Rolling terrain OK.\n\nEasy Run\n- 20m Z2 HR", "target": "HR", "tags": ["Base 2"], "external_id": "pp-b2-thu" },
+  { "start_date_local": "2026-10-04", "category": "WORKOUT", "type": "Run", "name": "Long Run: 30m", "description": "Flat to rolling. Walk any hill.\n\nEasy Run\n- 30m Z2 HR", "target": "HR", "tags": ["Base 2"], "external_id": "pp-b2-sun" },
+
+  { "start_date_local": "2026-10-06", "category": "WORKOUT", "type": "Run", "name": "Run: 20m", "description": "Rolling terrain.\n\nEasy Run\n- 20m Z2 HR", "target": "HR", "tags": ["Base 3"], "external_id": "pp-b3-tue" },
+  { "start_date_local": "2026-10-08", "category": "WORKOUT", "type": "Run", "name": "Run: 22m", "description": "Rolling. Walk hills.\n\nEasy Run\n- 22m Z2 HR", "target": "HR", "tags": ["Base 3"], "external_id": "pp-b3-thu" },
+  { "start_date_local": "2026-10-11", "category": "WORKOUT", "type": "Run", "name": "Long Run: 35m", "description": "Flat to rolling. Walk any climb.\n\nEasy Run\n- 35m Z2 HR", "target": "HR", "tags": ["Base 3"], "external_id": "pp-b3-sun" },
+
+  { "start_date_local": "2026-10-13", "category": "WORKOUT", "type": "Run", "name": "Recovery Run: 15m", "description": "Recovery. Flat. Very easy.\n\nEasy Recovery\n- 15m Z1 HR", "target": "HR", "tags": ["Recovery"], "external_id": "pp-rec1-tue" },
+  { "start_date_local": "2026-10-15", "category": "WORKOUT", "type": "Run", "name": "Recovery Run: 15m", "description": "Recovery. Flat. Short and easy.\n\nEasy Recovery\n- 15m Z1 HR", "target": "HR", "tags": ["Recovery"], "external_id": "pp-rec1-thu" },
+  { "start_date_local": "2026-10-18", "category": "WORKOUT", "type": "Run", "name": "Long Run: 22m", "description": "Recovery. Flat. Let body absorb.\n\nEasy Recovery\n- 22m Z1 HR", "target": "HR", "tags": ["Recovery"], "external_id": "pp-rec1-sun" },
+
+  { "start_date_local": "2026-10-20", "category": "WORKOUT", "type": "Run", "name": "Run: 22m", "description": "Back to work. Rolling terrain.\n\nEasy Run\n- 22m Z2 HR", "target": "HR", "tags": ["Build 1"], "external_id": "pp-bd1-tue" },
+  { "start_date_local": "2026-10-22", "category": "WORKOUT", "type": "Run", "name": "Run: 25m + Strides", "description": "Easy run with strides.\n\nEasy Run\n- 20m Z2 HR\n\nStrides 4x\n- 20s Z4 HR\n- 40s Z1 HR", "target": "HR", "tags": ["Build 1"], "external_id": "pp-bd1-thu" },
+  { "start_date_local": "2026-10-25", "category": "WORKOUT", "type": "Run", "name": "Long Run: 40m", "description": "Flat to rolling. Walk any climb.\n\nEasy Run\n- 40m Z2 HR", "target": "HR", "tags": ["Build 1"], "external_id": "pp-bd1-sun" },
+
+  { "start_date_local": "2026-10-27", "category": "WORKOUT", "type": "Run", "name": "Run: 22m", "description": "Flat to rolling.\n\nEasy Run\n- 22m Z2 HR", "target": "HR", "tags": ["Build 2"], "external_id": "pp-bd2-tue" },
+  { "start_date_local": "2026-10-29", "category": "WORKOUT", "type": "Run", "name": "Tempo Run: 30m", "description": "First tempo. Flat route.\n\nWarm Up\n- 10m Z2 HR\n\nTempo\n- 10m Z3 HR\n\nCool Down\n- 10m Z2 HR", "target": "HR", "tags": ["Build 2"], "external_id": "pp-bd2-thu" },
+  { "start_date_local": "2026-11-01", "category": "WORKOUT", "type": "Run", "name": "Long Run: 45m", "description": "Flat to rolling. Fuel if over 40min.\n\nEasy Run\n- 45m Z2 HR", "target": "HR", "tags": ["Build 2"], "external_id": "pp-bd2-sun" },
+
+  { "start_date_local": "2026-11-03", "category": "WORKOUT", "type": "Run", "name": "Run: 25m", "description": "Rolling terrain.\n\nEasy Run\n- 25m Z2 HR", "target": "HR", "tags": ["Build 3"], "external_id": "pp-bd3-tue" },
+  { "start_date_local": "2026-11-05", "category": "WORKOUT", "type": "Run", "name": "Tempo Run: 30m", "description": "Flat route. Longer tempo block.\n\nWarm Up\n- 9m Z2 HR\n\nTempo\n- 12m Z3 HR\n\nCool Down\n- 9m Z2 HR", "target": "HR", "tags": ["Build 3"], "external_id": "pp-bd3-thu" },
+  { "start_date_local": "2026-11-08", "category": "WORKOUT", "type": "Run", "name": "Long Run: 50m", "description": "Peak long run. Flat to rolling. ~8km.\n\nEasy Run\n- 50m Z2 HR", "target": "HR", "tags": ["Build 3"], "external_id": "pp-bd3-sun" },
+
+  { "start_date_local": "2026-11-10", "category": "WORKOUT", "type": "Run", "name": "Recovery Run: 15m", "description": "Recovery. Flat. Very easy.\n\nEasy Recovery\n- 15m Z1 HR", "target": "HR", "tags": ["Recovery"], "external_id": "pp-rec2-tue" },
+  { "start_date_local": "2026-11-12", "category": "WORKOUT", "type": "Run", "name": "Recovery Run: 15m", "description": "Recovery. Flat.\n\nEasy Recovery\n- 15m Z1 HR", "target": "HR", "tags": ["Recovery"], "external_id": "pp-rec2-thu" },
+  { "start_date_local": "2026-11-15", "category": "WORKOUT", "type": "Run", "name": "Long Run: 25m", "description": "Recovery. Flat. Let body absorb.\n\nEasy Recovery\n- 25m Z1 HR", "target": "HR", "tags": ["Recovery"], "external_id": "pp-rec2-sun" },
+
+  { "start_date_local": "2026-11-17", "category": "WORKOUT", "type": "Run", "name": "Run: 22m", "description": "Flat to rolling. Staying sharp.\n\nEasy Run\n- 22m Z2 HR", "target": "HR", "tags": ["Sharpen"], "external_id": "pp-sh-tue" },
+  { "start_date_local": "2026-11-19", "category": "WORKOUT", "type": "Run", "name": "Tempo Run: 28m", "description": "Flat route. Race effort preview.\n\nWarm Up\n- 8m Z2 HR\n\nTempo\n- 12m Z3 HR\n\nCool Down\n- 8m Z2 HR", "target": "HR", "tags": ["Sharpen"], "external_id": "pp-sh-thu" },
+  { "start_date_local": "2026-11-22", "category": "WORKOUT", "type": "Run", "name": "Long Run: 45m", "description": "Flat to rolling. Stay easy.\n\nEasy Run\n- 45m Z2 HR", "target": "HR", "tags": ["Sharpen"], "external_id": "pp-sh-sun" },
+
+  { "start_date_local": "2026-11-24", "category": "WORKOUT", "type": "Run", "name": "Run: 18m", "description": "Taper. Easy.\n\nEasy Run\n- 18m Z2 HR", "target": "HR", "tags": ["Taper"], "external_id": "pp-tap-tue" },
+  { "start_date_local": "2026-11-26", "category": "WORKOUT", "type": "Run", "name": "Tempo Run: 22m", "description": "Short tempo. Stay sharp.\n\nWarm Up\n- 7m Z2 HR\n\nTempo\n- 8m Z3 HR\n\nCool Down\n- 7m Z2 HR", "target": "HR", "tags": ["Taper"], "external_id": "pp-tap-thu" },
+  { "start_date_local": "2026-11-29", "category": "WORKOUT", "type": "Run", "name": "Long Run: 30m", "description": "Taper long run. Easy.\n\nEasy Run\n- 30m Z2 HR", "target": "HR", "tags": ["Taper"], "external_id": "pp-tap-sun" },
+
+  { "start_date_local": "2026-12-01", "category": "WORKOUT", "type": "Run", "name": "Shakeout: 15m + Strides", "description": "Race week. Easy with strides.\n\nEasy Run\n- 10m Z1-Z2 HR\n\nStrides 4x\n- 20s Z4 HR\n- 40s Z1 HR", "target": "HR", "tags": ["Race Week"], "external_id": "pp-rw-tue" },
+  { "start_date_local": "2026-12-03", "category": "WORKOUT", "type": "Run", "name": "Shakeout: 12m", "description": "Race week. Legs loose.\n\nEasy Run\n- 12m Z1 HR", "target": "HR", "tags": ["Race Week"], "external_id": "pp-rw-thu" },
+  { "start_date_local": "2026-12-06", "category": "WORKOUT", "type": "Run", "name": "RACE: Percy Pud 10k", "description": "Percy Pud. Sub-50. Start at 5:00/km, build into it.\n\nRace\n- 10km Z2-Z3 HR", "target": "HR", "tags": ["Race Day"], "external_id": "pp-race" }
+]
